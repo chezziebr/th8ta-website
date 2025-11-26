@@ -2,6 +2,7 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'About Us | TH8TA',
@@ -14,13 +15,20 @@ export default function AboutPage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-br from-[var(--color-teal)] to-[var(--color-sage)]">
-          <div className="absolute inset-0 bg-black/10"></div>
+        <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1920&h=800&fit=crop&q=80"
+            alt="Endurance athlete at rest after workout"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-teal)]/70 to-[var(--color-sage)]/70"></div>
           <div className="relative z-10 text-center px-4 max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
               What Comes After
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-white/95 drop-shadow-md">
               The finish line, the climb, the brutal tempo effort.
             </p>
           </div>
@@ -124,9 +132,16 @@ export default function AboutPage() {
               Meet Our Curators
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {curators.map((curator) => (
+              {curators.map((curator, index) => (
                 <div key={curator.name} className="text-center">
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[var(--color-sage)] to-[var(--color-teal)] mx-auto mb-4"></div>
+                  <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4 relative">
+                    <Image
+                      src={curator.image}
+                      alt={curator.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">
                     {curator.name}
                   </h3>
@@ -164,15 +179,18 @@ const curators = [
     name: 'Sarah Chen',
     sport: 'Ultra Runner',
     bio: "After 100-milers, Sarah knows recovery isn't optional. She curates Stage 1 & 4 gear.",
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&q=80',
   },
   {
     name: 'Marcus Thompson',
     sport: 'Cyclist & Triathlete',
     bio: '50+ mile weeks mean Marcus lives in recovery mode. He tests everything in Stage 2 & 3.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&q=80',
   },
   {
     name: 'Jamie Rodriguez',
     sport: 'Mountain Athlete',
     bio: 'From trail runs to ski touring, Jamie finds gear that transitions seamlessly through all stages.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80',
   },
 ];

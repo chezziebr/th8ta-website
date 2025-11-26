@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,13 +12,20 @@ export default function Home() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[600px] md:h-[700px] flex items-center justify-center bg-gradient-to-br from-[var(--color-sage)] to-[var(--color-teal)]">
-          <div className="absolute inset-0 bg-black/20"></div>
+        <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1920&h=1080&fit=crop&q=80"
+            alt="Athlete recovering after workout"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-sage)]/60 to-[var(--color-teal)]/60"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               You earned this layer.
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/95 mb-8 max-w-2xl mx-auto drop-shadow-md">
               Not activewear. Afterwear. Curated recovery gear for endurance athletes who know
               that what you wear after matters just as much.
             </p>
@@ -154,16 +162,30 @@ export default function Home() {
         </section>
 
         {/* Curated by Athletes */}
-        <section className="py-16 md:py-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-6">
-              Curated by Athletes, For Athletes
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
-              Like The Feed, but for recovery. You can buy these products anywhere, but we've
-              tested them after 50-mile weeks, hill repeats, and ice baths. We're endurance
-              athletes who know what works.
-            </p>
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=1000&fit=crop&q=80"
+                  alt="Endurance athlete in recovery mode"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-6">
+                  Curated by Athletes, For Athletes
+                </h2>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+                  Like The Feed, but for recovery. You can buy these products anywhere, but we've
+                  tested them after 50-mile weeks, hill repeats, and ice baths.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  We're endurance athletes who know what works—and more importantly, we know <em>when</em> it works.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

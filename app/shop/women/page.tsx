@@ -54,10 +54,17 @@ export default function WomenShopPage() {
       <Navigation />
       <main className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="bg-[var(--color-sage)] text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Women's Recovery Gear</h1>
-            <p className="text-lg text-white/90">
+        <section className="relative bg-[var(--color-sage)] text-white py-16 overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1920&h=600&fit=crop&q=80"
+            alt="Women's recovery wear collection"
+            fill
+            className="object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-[var(--color-sage)]/80"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Women's Recovery Gear</h1>
+            <p className="text-lg text-white/95 drop-shadow-md">
               Curated pieces organized by the 4-Stage Recovery System
             </p>
           </div>

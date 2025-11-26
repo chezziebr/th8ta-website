@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'The Science of Recovery | TH8TA',
@@ -15,13 +16,20 @@ export default function SciencePage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-br from-[var(--color-teal)] to-[var(--color-lavender)]">
-          <div className="absolute inset-0 bg-black/20"></div>
+        <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=800&fit=crop&q=80"
+            alt="Athlete in deep rest and recovery"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-teal)]/75 to-[var(--color-lavender)]/75"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
               Your Brain Needs Permission to Stop Being an Athlete
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-white/95 drop-shadow-md">
               The neuroscience of recovery clothing, rituals, and why soft fabrics aren't a luxury.
             </p>
           </div>

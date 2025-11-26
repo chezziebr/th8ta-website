@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'The 4-Stage Recovery System™ | TH8TA',
@@ -23,8 +24,15 @@ export default function SystemPage() {
       <Navigation />
       <main>
         {/* HERO SECTION */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-b from-[var(--color-cream)] to-[var(--color-sage)] bg-opacity-10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="relative py-20 md:py-32 overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1200&fit=crop&q=80"
+            alt="Recovery gear organized by stages"
+            fill
+            className="object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-cream)]/95 to-[var(--color-sage)]/90"></div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-[var(--color-charcoal)] mb-6">
               The 4-Stage Recovery System™
             </h1>
