@@ -187,9 +187,9 @@ export default function WomenShopPage() {
               {/* Products */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredProducts.map((product) => (
-                  <Link key={product.id} href={`/product/${product.slug}`}>
-                    <Card hover padding="none" className="overflow-hidden group cursor-pointer">
-                      <div className="aspect-[3/4] bg-gray-200 relative overflow-hidden">
+                  <Link key={product.id} href={`/product/${product.slug}`} className="h-full">
+                    <Card hover padding="none" className="overflow-hidden group cursor-pointer h-full flex flex-col">
+                      <div className="aspect-[3/4] bg-gray-200 relative overflow-hidden flex-shrink-0">
                         <Image
                           src={product.featuredImage}
                           alt={product.name}
@@ -202,13 +202,13 @@ export default function WomenShopPage() {
                           </div>
                         )}
                       </div>
-                      <div className="p-4">
+                      <div className="p-4 flex-1 flex flex-col">
                         <p className="text-xs text-gray-600 mb-1">{product.brand}</p>
-                        <h3 className="font-semibold text-[var(--color-charcoal)] mb-1 group-hover:text-[var(--color-sage)] transition-colors">
+                        <h3 className="font-semibold text-[var(--color-charcoal)] mb-1 group-hover:text-[var(--color-sage)] transition-colors line-clamp-2">
                           {product.name}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-2">{product.shortDescription}</p>
-                        <p className="font-bold text-[var(--color-charcoal)]">${product.retailPrice}</p>
+                        <p className="text-gray-600 text-sm mb-2 line-clamp-2 flex-1">{product.shortDescription}</p>
+                        <p className="font-bold text-[var(--color-charcoal)] mt-auto">${product.retailPrice}</p>
                       </div>
                     </Card>
                   </Link>
