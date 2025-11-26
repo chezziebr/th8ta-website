@@ -1,303 +1,172 @@
 @import "tailwindcss";
 
-/* ============================================
-   TH8TA DESIGN SYSTEM
-   Minimal Palette: Gray, White, Lilac
-   Version 1.0 | November 2025
-   ============================================ */
-
 :root {
-  /* ===================
-     COLOR PALETTE
-     =================== */
+  /* MINIMAL Gray/White/Lilac Color Scheme */
+  --charcoal: #2a2a2a;         /* Dark Charcoal - Strong Text */
+  --lilac: #B8A9C9;            /* Primary Accent - Lilac */
+  --warm-gray: #F2F0ED;        /* Warm Gray - Backgrounds */
+  --soft-white: #FAFAFA;       /* Clean White Background */
 
-  /* Primary Colors */
-  --color-charcoal: #2A2A2A;           /* Headlines, nav, primary text */
-  --color-charcoal-soft: #3D3D3D;      /* Slightly lighter for large text blocks */
+  /* Legacy color names mapped to minimal scheme */
+  --sage: #B8A9C9;             /* Mapped to Lilac */
+  --teal: #B8A9C9;             /* Mapped to Lilac */
+  --terracotta: #B8A9C9;       /* Mapped to Lilac */
+  --lavender: #B8A9C9;         /* Mapped to Lilac */
+  --cream: #F2F0ED;            /* Mapped to Warm Gray */
 
-  /* Background Colors */
-  --color-white: #FFFFFF;              /* Pure white - cards, clean space */
-  --color-soft-white: #FAFAFA;         /* Main page background */
-  --color-warm-gray: #F2F0ED;          /* Section dividers, card backgrounds */
-  --color-warm-gray-dark: #E8E5E1;     /* Hover states on warm gray */
-
-  /* Accent Color - Lilac (USE SPARINGLY) */
-  --color-lilac: #B8A9C9;              /* Primary accent - CTAs, badges */
-  --color-lilac-hover: #A899BA;        /* Hover state for lilac */
-  --color-lilac-light: #D4C9E0;        /* Light lilac for subtle backgrounds */
-  --color-lilac-soft: #EDE9F2;         /* Very light lilac wash */
-
-  /* Neutral Grays */
-  --color-border: #E5E5E5;             /* Borders, dividers */
-  --color-border-dark: #D5D5D5;        /* Darker borders for emphasis */
-  --color-text-secondary: #6B6B6B;     /* Captions, metadata, secondary text */
-  --color-text-tertiary: #999999;      /* Disabled states, placeholders */
-
-  /* Stone/Taupe (for photography backgrounds) */
-  --color-stone: #C8C2BC;              /* Reference for image backgrounds */
-  --color-stone-light: #D9D5D0;        /* Lighter stone */
-  --color-stone-warm: #D4CEC6;         /* Warmer stone variant */
-
-  /* Semantic Colors */
-  --color-success: #7DA47D;            /* Success states - muted green */
-  --color-error: #C97B7B;              /* Error states - muted red */
-  --color-warning: #D4B896;            /* Warning states - muted gold */
-
-  /* Legacy mappings for backwards compatibility */
-  --color-sage: var(--color-lilac);
-  --color-teal: var(--color-lilac);
-  --color-terracotta: var(--color-lilac);
-  --color-lavender: var(--color-lilac);
-  --color-cream: var(--color-warm-gray);
-
-  /* ===================
-     TYPOGRAPHY
-     =================== */
-
-  /* Font Families */
-  --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  /* Legacy font mappings */
-  --font-headline: var(--font-primary);
-  --font-body: var(--font-secondary);
-
-  /* Font Sizes - Desktop */
-  --text-xs: 0.75rem;      /* 12px */
-  --text-sm: 0.875rem;     /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg: 1.125rem;     /* 18px */
-  --text-xl: 1.25rem;      /* 20px */
-  --text-2xl: 1.5rem;      /* 24px */
-  --text-3xl: 1.875rem;    /* 30px */
-  --text-4xl: 2.25rem;     /* 36px */
-  --text-5xl: 3rem;        /* 48px */
-  --text-6xl: 3.75rem;     /* 60px */
-  --text-7xl: 4.5rem;      /* 72px */
-
-  /* Font Weights */
-  --font-light: 300;
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
-
-  /* Line Heights */
-  --leading-none: 1;
-  --leading-tight: 1.25;
-  --leading-snug: 1.375;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
-  --leading-loose: 1.75;
-
-  /* Letter Spacing */
-  --tracking-tighter: -0.05em;
-  --tracking-tight: -0.025em;
-  --tracking-normal: 0;
-  --tracking-wide: 0.025em;
-  --tracking-wider: 0.05em;
-  --tracking-widest: 0.1em;
-
-  /* ===================
-     SPACING
-     =================== */
-
-  --space-0: 0;
-  --space-1: 0.25rem;      /* 4px */
-  --space-2: 0.5rem;       /* 8px */
-  --space-3: 0.75rem;      /* 12px */
-  --space-4: 1rem;         /* 16px */
-  --space-5: 1.25rem;      /* 20px */
-  --space-6: 1.5rem;       /* 24px */
-  --space-8: 2rem;         /* 32px */
-  --space-10: 2.5rem;      /* 40px */
-  --space-12: 3rem;        /* 48px */
-  --space-16: 4rem;        /* 64px */
-  --space-20: 5rem;        /* 80px */
-  --space-24: 6rem;        /* 96px */
-  --space-32: 8rem;        /* 128px */
-  --space-40: 10rem;       /* 160px */
-
-  /* ===================
-     BORDERS & RADIUS
-     =================== */
-
-  --radius-none: 0;
-  --radius-sm: 0.125rem;   /* 2px */
-  --radius-default: 0.25rem; /* 4px */
-  --radius-md: 0.375rem;   /* 6px */
-  --radius-lg: 0.5rem;     /* 8px */
-  --radius-xl: 0.75rem;    /* 12px */
-  --radius-2xl: 1rem;      /* 16px */
-  --radius-full: 9999px;   /* Pill shape */
-
-  --border-width: 1px;
-  --border-width-2: 2px;
-
-  /* ===================
-     SHADOWS
-     =================== */
-
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-  /* ===================
-     TRANSITIONS
-     =================== */
-
-  --transition-fast: 150ms ease;
-  --transition-default: 200ms ease;
-  --transition-slow: 300ms ease;
-  --transition-slower: 500ms ease;
-
-  /* ===================
-     Z-INDEX SCALE
-     =================== */
-
-  --z-dropdown: 100;
-  --z-sticky: 200;
-  --z-fixed: 300;
-  --z-modal-backdrop: 400;
-  --z-modal: 500;
-  --z-popover: 600;
-  --z-tooltip: 700;
+  --background: #ffffff;
+  --foreground: #2a2a2a;
 }
 
 @theme inline {
-  /* Brand Color Utilities for Tailwind */
+  /* MINIMAL Brand Color Utilities */
 
-  /* Charcoal */
-  --color-charcoal: #2A2A2A;
-  --color-charcoal-soft: #3D3D3D;
+  /* Lilac - Primary Accent */
+  --color-lilac: #B8A9C9;
+  --color-lilac-dark: #A899BA;
+  --color-lilac-light: #D4C9E0;
 
-  /* White & Grays */
-  --color-white: #FFFFFF;
-  --color-soft-white: #FAFAFA;
+  /* Charcoal - Dark Strong Text */
+  --color-charcoal: #2a2a2a;
+  --color-charcoal-light: #4a4a4a;
+  --color-charcoal-dark: #1a1a1a;
+
+  /* Warm Gray - Neutral Background */
   --color-warm-gray: #F2F0ED;
   --color-warm-gray-dark: #E8E5E1;
+  --color-warm-gray-light: #FAFAFA;
 
-  /* Lilac Accent */
-  --color-lilac: #B8A9C9;
-  --color-lilac-hover: #A899BA;
-  --color-lilac-light: #D4C9E0;
-  --color-lilac-soft: #EDE9F2;
+  /* Soft White - Clean Background */
+  --color-soft-white: #FAFAFA;
+  --color-white: #FFFFFF;
 
-  /* Borders & Text */
-  --color-border: #E5E5E5;
-  --color-text-secondary: #6B6B6B;
-  --color-text-tertiary: #999999;
+  /* Legacy color mappings for backward compatibility */
+  --color-sage: #B8A9C9;
+  --color-sage-dark: #A899BA;
+  --color-sage-light: #D4C9E0;
 
-  /* Legacy mappings */
-  --color-sage: var(--color-lilac);
-  --color-teal: var(--color-lilac);
-  --color-terracotta: var(--color-lilac);
-  --color-lavender: var(--color-lilac);
-  --color-cream: var(--color-warm-gray);
-}
+  --color-teal: #B8A9C9;
+  --color-teal-dark: #A899BA;
+  --color-teal-light: #D4C9E0;
 
-/* ============================================
-   BASE STYLES
-   ============================================ */
+  --color-terracotta: #B8A9C9;
+  --color-terracotta-dark: #A899BA;
+  --color-terracotta-light: #D4C9E0;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  --color-lavender: #B8A9C9;
+  --color-lavender-dark: #A899BA;
+  --color-lavender-light: #D4C9E0;
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-cream: #F2F0ED;
+  --color-cream-dark: #E8E5E1;
+  --color-cream-light: #FAFAFA;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Typography */
+  --font-headline: 'Montserrat', 'Outfit', 'Work Sans', sans-serif;
+  --font-body: 'Inter', 'Open Sans', 'Lato', sans-serif;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-section-mobile: 3rem;
 }
 
 body {
-  font-family: var(--font-secondary);
-  font-size: var(--text-base);
-  font-weight: var(--font-normal);
-  line-height: var(--leading-normal);
-  color: var(--color-charcoal);
-  background-color: var(--color-soft-white);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
 }
 
-/* ============================================
-   TYPOGRAPHY STYLES
-   ============================================ */
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-primary);
-  font-weight: var(--font-semibold);
-  line-height: var(--leading-tight);
-  color: var(--color-charcoal);
+  font-family: var(--font-headline);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-semibold);
-  letter-spacing: var(--tracking-tight);
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: var(--text-4xl);
-  font-weight: var(--font-semibold);
-  letter-spacing: var(--tracking-tight);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-medium);
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-h4 {
-  font-size: var(--text-2xl);
-  font-weight: var(--font-medium);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-h5 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-medium);
+/* Modern card and section styles */
+.card-modern {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-h6 {
-  font-size: var(--text-lg);
-  font-weight: var(--font-medium);
+.card-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Links */
-a {
-  color: var(--color-charcoal);
-  text-decoration: none;
-  transition: color var(--transition-fast);
+/* Clean button styles */
+.btn-primary {
+  background: var(--charcoal);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
-a:hover {
-  color: var(--color-lilac);
+.btn-primary:hover {
+  background: var(--color-charcoal-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================ */
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  border: 1px solid var(--color-charcoal);
+  cursor: pointer;
+}
 
-@media (max-width: 1024px) {
-  :root {
-    --text-5xl: 2.5rem;
-    --text-6xl: 3rem;
-    --text-7xl: 3.5rem;
-  }
+.btn-secondary:hover {
+  background: var(--charcoal);
+  color: white;
+}
+
+/* Clean section spacing */
+.section-clean {
+  padding: 5rem 0;
 }
 
 @media (max-width: 768px) {
-  :root {
-    --text-4xl: 1.875rem;
-    --text-5xl: 2.25rem;
-    --text-6xl: 2.5rem;
+  .section-clean {
+    padding: 3rem 0;
   }
 
   h1 {
@@ -312,93 +181,3 @@ a:hover {
     font-size: 1.25rem;
   }
 }
-
-/* ============================================
-   UTILITY CLASSES
-   ============================================ */
-
-/* Clean card styles */
-.card-modern {
-  background: white;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: transform var(--transition-default), box-shadow var(--transition-default);
-}
-
-.card-modern:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Button styles */
-.btn-primary {
-  background: var(--color-lilac);
-  color: white;
-  padding: 0.875rem 2rem;
-  border-radius: var(--radius-default);
-  font-weight: var(--font-medium);
-  letter-spacing: var(--tracking-wide);
-  transition: all var(--transition-default);
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: var(--color-lilac-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--color-charcoal);
-  padding: 0.875rem 2rem;
-  border-radius: var(--radius-default);
-  font-weight: var(--font-medium);
-  letter-spacing: var(--tracking-wide);
-  transition: all var(--transition-default);
-  border: var(--border-width) solid var(--color-charcoal);
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background: var(--color-charcoal);
-  color: white;
-}
-
-/* Section spacing */
-.section-clean {
-  padding: 5rem 0;
-}
-
-@media (max-width: 768px) {
-  .section-clean {
-    padding: 3rem 0;
-  }
-}
-
-/* ============================================
-   LILAC ACCENT USAGE GUIDE
-   ============================================ */
-
-/*
-   USE LILAC FOR:
-   ✓ Primary CTA buttons (.btn-primary)
-   ✓ Stage badges
-   ✓ Active navigation states
-   ✓ Hover states on links
-   ✓ Focus states on form inputs
-   ✓ "Add to Cart" buttons
-   ✓ Newsletter signup buttons
-   ✓ Selected filter states
-
-   DO NOT USE LILAC FOR:
-   ✗ Large background sections
-   ✗ Body text
-   ✗ Headers
-   ✗ Multiple elements at once
-   ✗ Overusing on any single page
-
-   RULE: Lilac should be a "whisper, not a shout"
-   Aim for 1-3 lilac elements visible at any time
-*/
