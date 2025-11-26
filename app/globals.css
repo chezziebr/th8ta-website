@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
 :root {
+  /* REFINED & FUN Color Scheme - Vibrant Update */
+  --iolana: #9187AA;           /* Primary - Purple/Mauve */
+  --charcoal: #2a2a2a;         /* Dark Charcoal - Strong Text */
+  --golden: #F4B942;           /* Accent - Golden Yellow (Fun!) */
+  --coral: #E8785C;            /* Secondary - Coral/Terracotta */
+  --volcanic: #5C4F47;         /* Deep Earth - Dark Gray */
+  --cream: #FAFAFA;            /* Clean White Background */
+
+  /* Legacy color names mapped to vibrant scheme */
+  --sage: #9187AA;             /* Mapped to Iolana */
+  --teal: #9187AA;             /* Mapped to Iolana */
+  --terracotta: #E8785C;       /* Mapped to Coral */
+  --lavender: #9187AA;         /* Mapped to Iolana */
+  --bronze: #F4B942;           /* Mapped to Golden */
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2a2a2a;
 }
 
 @theme inline {
+  /* REFINED & FUN Brand Color Utilities */
+
+  /* Iolana - Primary Purple/Mauve */
+  --color-iolana: #9187AA;
+  --color-iolana-dark: #75698a;
+  --color-iolana-light: #b3aac5;
+
+  /* Charcoal - Dark Strong Text */
+  --color-charcoal: #2a2a2a;
+  --color-charcoal-light: #4a4a4a;
+  --color-charcoal-dark: #1a1a1a;
+
+  /* Golden Yellow - Fun Accent (replaces bronze) */
+  --color-golden: #F4B942;
+  --color-golden-dark: #d49b1f;
+  --color-golden-light: #f7cd6d;
+
+  /* Coral - Warm Secondary (updated terracotta) */
+  --color-coral: #E8785C;
+  --color-coral-dark: #d4583d;
+  --color-coral-light: #f0967f;
+
+  /* Volcanic Earth - Deep Gray */
+  --color-volcanic: #5C4F47;
+  --color-volcanic-dark: #3d342f;
+  --color-volcanic-light: #7a6b61;
+
+  /* Cream - Clean Background */
+  --color-cream: #FAFAFA;
+  --color-cream-dark: #f0f0f0;
+  --color-cream-light: #ffffff;
+
+  /* Legacy color mappings for backward compatibility */
+  --color-sage: #9187AA;
+  --color-sage-dark: #75698a;
+  --color-sage-light: #b3aac5;
+
+  --color-teal: #9187AA;
+  --color-teal-dark: #75698a;
+  --color-teal-light: #b3aac5;
+
+  --color-terracotta: #E8785C;
+  --color-terracotta-dark: #d4583d;
+  --color-terracotta-light: #f0967f;
+
+  --color-lavender: #9187AA;
+  --color-lavender-dark: #75698a;
+  --color-lavender-light: #b3aac5;
+
+  --color-bronze: #F4B942;
+  --color-bronze-dark: #d49b1f;
+  --color-bronze-light: #f7cd6d;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Typography */
+  --font-headline: 'Montserrat', 'Outfit', 'Work Sans', sans-serif;
+  --font-body: 'Inter', 'Open Sans', 'Lato', sans-serif;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-section-mobile: 3rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern card and section styles */
+.card-modern {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Clean button styles */
+.btn-primary {
+  background: var(--charcoal);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--color-charcoal-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  border: 1px solid var(--color-charcoal);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--charcoal);
+  color: white;
+}
+
+/* Clean section spacing */
+.section-clean {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-clean {
+    padding: 3rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
 }
