@@ -785,6 +785,80 @@ export const products: Product[] = [
     inStock: true,
     sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL'],
   },
+
+  // ===== PRODUCT 12: Pleated Skirt (400557) =====
+  {
+    id: '400557',
+    slug: 'pleated-midi-skirt',
+    name: 'Pleated Skirt',
+    brand: 'Nordstrom',
+    retailPrice: 65,
+    colors: [
+      {
+        name: 'Sky Blue',
+        hex: '#87CEEB',
+        images: [
+          '/images/products/400557-1.png',
+          '/images/products/400557-2.png',
+          '/images/products/400557-3.png',
+        ],
+      },
+    ],
+    featuredImage: '/images/products/400557-1.png',
+    category: 'bottoms',
+    recoveryStage: 3,
+    shortDescription:
+      'Flowy pleated skirt that goes from fancy to athletic - feminine flow for strong bodies',
+    ourDescription:
+      "Super stylish skirt goes from fancy to just barely toning down your athletic wear when paired with tight tank. Show off the upper body but add some feminine flow to the bottom.",
+    inRecovery:
+      "No way you're working out in this skirt, but it's flowy and loose enough to pair a set of cropped leggings underneath if you need the compression. This is for the athlete who wants to feel feminine and put-together while still honoring their athletic build. The loose, flowing fabric signals to your brain that you're off-duty and relaxing.",
+    wearIt: 'With a cropped tank or bra and loose cardigan if chilly',
+    fabric: {
+      composition: '100% Polyester',
+      feel: 'Lightweight pleated fabric with smooth, flowy drape',
+      type: 'synthetic',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low or hang to dry',
+        'Do not bleach',
+        'Cool iron if needed',
+        'Use Guppyfriend bag to reduce microplastic shedding',
+      ],
+    },
+    fit: {
+      description: 'Loose and flowy, midi length, high-waisted',
+      showsOff: 'Calves, glutes',
+    },
+    pairItWith: [
+      {
+        productId: '400556',
+        productName: 'Light Compression Leggings',
+        reason: 'Layer leggings underneath for compression while keeping the feminine skirt flow',
+      },
+      {
+        productId: '400544',
+        productName: 'Halter Crop Tank',
+        reason: 'Show off shoulders and core while adding flow to the bottom',
+      },
+      {
+        productId: '400534',
+        productName: 'Boxy Cropped Tee',
+        reason: 'Loose top with flowy skirt creates a relaxed, feminine look',
+      },
+      {
+        productId: '400550',
+        productName: 'High Crop Halter Tank',
+        reason: 'Athletic top meets feminine skirt - perfect balance',
+      },
+    ],
+    sustainabilityNotes:
+      'Synthetic pleated fabric. Use Guppyfriend bag when washing to reduce microplastic shedding.',
+    brandLink: 'https://www.nordstromrack.com/s/nordstrom-pleated-midi-skirt/7747846',
+    inStock: true,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
 ];
 
 // ===== MATCHED SETS =====
