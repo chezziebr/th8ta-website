@@ -1426,10 +1426,13 @@ export const products: Product[] = [
       {
         name: 'Athletic Heather Grey',
         hex: '#A8A8A8',
-        images: ['/products/400538 - gray.webp'],
+        images: [
+          '/products/400538 - gray.png',
+          '/products/400538 - gray 2.png',
+        ],
       },
     ],
-    featuredImage: '/products/400538 - gray.webp',
+    featuredImage: '/products/400538 - gray.png',
     category: 'outerwear',
     recoveryStage: 3,
     shortDescription:
