@@ -940,10 +940,13 @@ export const products: Product[] = [
       {
         name: 'Gray',
         hex: '#808080',
-        images: ['/products/placeholder.svg'],
+        images: [
+          '/products/400542 - gray.png',
+          '/products/400542 - gray 2.png',
+        ],
       },
     ],
-    featuredImage: '/products/placeholder.svg',
+    featuredImage: '/products/400542 - gray.png',
     category: 'tops',
     recoveryStage: 2,
     shortDescription:
