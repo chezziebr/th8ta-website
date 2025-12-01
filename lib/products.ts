@@ -859,6 +859,851 @@ export const products: Product[] = [
     inStock: true,
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
+
+  // ===== PRODUCT 13: Puffer Booties (400548) =====
+  {
+    id: '400548',
+    slug: 'puffer-booties',
+    name: 'Puffer Booties',
+    brand: 'Outdoor Research',
+    retailPrice: 99,
+    colors: [
+      {
+        name: 'Purple',
+        hex: '#8B5A8C',
+        images: ['/products/400548 - purple.webp'],
+      },
+    ],
+    featuredImage: '/products/400548 - purple.webp',
+    category: 'accessories',
+    recoveryStage: 1,
+    shortDescription:
+      'Boots so cozy there is no way you are doing anything but recovering',
+    ourDescription:
+      'These amazing boots feel so good you will crave them every day. Gold technologies and a rugged rubber sole to create the ultimate cold weather footwear, perfect for cabins, camping, and après ski.',
+    inRecovery:
+      'Boots so cozy there is no way you are doing anything but recovering; soles so tough you can wear them out and about.',
+    wearIt: 'Anytime',
+    fabric: {
+      composition:
+        'bluesign® approved Pertex® Quantum Eco 100% Polyester (53% Recycled) 30D Double Rip Stop Shell Upper, 100% Tricot Lining, 100% Polyester Primaloft® Gold Insulation With Cross Core Technology 200 G/M², EVA Foam and Memory Foam Insole',
+      feel: 'Ultra cozy insulated boots with rugged rubber sole',
+      type: 'synthetic',
+      microplasticLevel: 'low',
+      careInstructions: [
+        'Spot clean as needed',
+        'Air dry away from direct heat',
+        'Do not machine wash',
+      ],
+    },
+    fit: {
+      description: 'Standard bootie fit',
+      showsOff: 'Nothing - pure comfort',
+    },
+    pairItWith: [
+      {
+        productId: '400533',
+        productName: 'Every Day Short',
+        reason: 'Cozy feet with athletic shorts',
+      },
+      {
+        productId: '400543',
+        productName: 'Cropped Puffer',
+        reason: 'Complete cold-weather recovery outfit',
+      },
+      {
+        productId: '400535',
+        productName: 'Cropped Corset Fleece',
+        reason: 'Stay warm from head to toe',
+      },
+    ],
+    sustainabilityNotes:
+      'Made with 53% recycled polyester and bluesign® approved materials. PrimaLoft Gold insulation is sustainable and ethical alternative to down.',
+    brandLink: 'https://www.outdoorresearch.com/products/womens-tundra-trax-booties-300563',
+    inStock: true,
+    sizes: ['6', '7', '8', '9', '10', '11'],
+  },
+
+  // ===== PRODUCT 14: Recovery Sweatshirt (400542) =====
+  {
+    id: '400542',
+    slug: 'recovery-sweatshirt',
+    name: 'Recovery Sweatshirt',
+    brand: 'Vuori',
+    retailPrice: 118,
+    colors: [
+      {
+        name: 'Gray',
+        hex: '#808080',
+        images: ['/products/400542 - gray.webp'],
+      },
+    ],
+    featuredImage: '/products/400542 - gray.webp',
+    category: 'tops',
+    recoveryStage: 2,
+    shortDescription:
+      'So cozy and thick - warm for cool days over a tank or tee',
+    ourDescription:
+      'So cozy and thick, you will be glad you did! Warm for the cool days, and great to wear over a tank or tee',
+    inRecovery:
+      'Perfect for removing the chill post workout, and so thick and luxurious you for sure are not working out in it.',
+    wearIt: 'Over a tank, tee and with leggings',
+    fabric: {
+      composition: '66% Organic Cotton, 34% Polyester',
+      feel: 'Ultra-soft fleece with substantial warmth',
+      type: 'blend',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Use Guppyfriend bag to reduce microplastic shedding',
+      ],
+    },
+    fit: {
+      description: 'Relaxed fit, half-zip design',
+      showsOff: 'Nothing - pure comfort',
+    },
+    pairItWith: [
+      {
+        productId: '400536',
+        productName: 'Not for Jogging',
+        reason: 'Complete cozy recovery outfit',
+      },
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings',
+        reason: 'Warm top with supportive bottoms',
+      },
+    ],
+    sustainabilityNotes:
+      '66% organic cotton reduces environmental impact. Contains some synthetic materials - use Guppyfriend bag.',
+    brandLink: 'https://www.nordstrom.com/s/vuori-restore-half-zip-hoodie/7528947',
+    inStock: true,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 15: Rump Wrap (400558) =====
+  {
+    id: '400558',
+    slug: 'rump-wrap',
+    name: 'Rump Wrap',
+    brand: 'TH8TA',
+    retailPrice: 48,
+    colors: [
+      {
+        name: 'Black',
+        hex: '#1a1a1a',
+        images: ['/products/400558 - black.webp'],
+      },
+    ],
+    featuredImage: '/products/400558 - black.webp',
+    category: 'accessories',
+    recoveryStage: 1,
+    shortDescription:
+      'Keep your car seat protected after workout - winter and summer weight options',
+    ourDescription:
+      'To keep your car seat protected after your workout. Comes in winter weight to also hold in warmth after those chilly workouts and summer weight when its all about the sweat.',
+    inRecovery:
+      'Recovery starts the moment your workout ends. This rump wrap protects your car seat while helping maintain body temperature in the critical post-workout period.',
+    wearIt: 'In your car immediately after workout',
+    fabric: {
+      composition: 'Quick-dry absorbent fabric (varies by season)',
+      feel: 'Absorbent and protective',
+      type: 'synthetic',
+      microplasticLevel: 'low',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Wash frequently',
+      ],
+    },
+    fit: {
+      description: 'Universal car seat fit',
+      showsOff: 'Nothing - functional accessory',
+    },
+    pairItWith: [],
+    sustainabilityNotes:
+      'Designed for durability and frequent washing. Protects car seats and extends their life.',
+    brandLink: '#',
+    inStock: true,
+    sizes: ['One Size'],
+  },
+
+  // ===== PRODUCT 16: Washable Puffer (400546) =====
+  {
+    id: '400546',
+    slug: 'warm-down-puffer',
+    name: 'Warm Down Puffer',
+    brand: 'Kuhl',
+    retailPrice: 395,
+    colors: [
+      {
+        name: 'Powder Blue',
+        hex: '#B0D4E3',
+        images: ['/products/400546 - powder blue.webp'],
+      },
+    ],
+    featuredImage: '/products/400546 - powder blue.webp',
+    category: 'outerwear',
+    recoveryStage: 1,
+    shortDescription:
+      'Washable puffer for warmth right after your workout - packable and sweat-ready',
+    ourDescription:
+      'This washable puffer is meant for warmth right after you finish your workout. Since you should still be generating heat (but want to prevent yourself from losing it), this puffer is medium weight and packable so you can always bring it with you. Despite the name, there is no down in there so it is easily washable and can handle your sweat!',
+    inRecovery:
+      'After your chilly workouts the post-workout chill really can set in, and set in fast. Once your core temperature has dropped it is hard to get it back up. Throw on this puffer immediately, before you cool down, to keep that temperature regulated. Recovery starts before your workout ends, so keeping yourself warm throughout only hastens the process. All your calories and efforts go to recovery and not to teeth chattering or warming up a chilled body.',
+    wearIt: 'Over your workout clothes or for after',
+    fabric: {
+      composition: '100% Polyester with synthetic insulation',
+      feel: 'Medium weight, packable, water-resistant',
+      type: 'synthetic',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine washable',
+        'Tumble dry low',
+        'Do not bleach',
+        'Use Guppyfriend bag',
+      ],
+    },
+    fit: {
+      description: 'Medium density, loose fit, long to cover more',
+      showsOff: 'Nothing',
+    },
+    pairItWith: [
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings',
+        reason: 'Stay warm during critical post-workout recovery',
+      },
+    ],
+    sustainabilityNotes:
+      'Synthetic insulation is washable and ethical alternative to down. Packable design reduces shipping impact.',
+    brandLink: 'https://www.kuhl.com/kuhl/womens/outerwear/ws-firestorm-down-hoody/',
+    inStock: true,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 17: Just in Case Jacket (400547) =====
+  {
+    id: '400547',
+    slug: 'just-in-case-jacket',
+    name: 'Just in Case Jacket',
+    brand: 'Patagonia',
+    retailPrice: 108,
+    colors: [
+      {
+        name: 'Salmon',
+        hex: '#FA8072',
+        images: ['/products/400547 - salmon.webp'],
+      },
+    ],
+    featuredImage: '/products/400547 - salmon.webp',
+    category: 'outerwear',
+    recoveryStage: 1,
+    shortDescription:
+      'Lightweight, packable jacket for when recovery needs to start on the trail',
+    ourDescription:
+      'This is the jacket that is light enough and slim enough but also warm enough that you want to bring with you on any work out that is not summer or a warm climate. You never know when you might need to walk, and then anything but a summer climb at the body temperature could plummet rapidly. Lightweight, packable, and heat trapping.',
+    inRecovery:
+      'If recovery has to start on the trail, or perhaps before the work out is over for one reason or another, this is the jacket you want with you. Specifically designed to be lightweight, it traps body heat when you need it most. Best to not work out in it, but save it for immediately after or maybe for the last few miles. One of the only hybrid workout/recovery items we sell.',
+    wearIt: 'If you need it, or after a light session and you need to cut the chill a bit',
+    fabric: {
+      composition: '100% Nylon ripstop',
+      feel: 'Ultra-lightweight, windproof, packable',
+      type: 'synthetic',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine wash cold',
+        'Line dry or tumble dry low',
+        'Do not bleach',
+        'Use Guppyfriend bag',
+      ],
+    },
+    fit: {
+      description: 'Slim fit, packable',
+      showsOff: 'Nothing - functional layer',
+    },
+    pairItWith: [],
+    sustainabilityNotes:
+      'Patagonia Fair Trade Certified. Durable ripstop construction for long garment life.',
+    brandLink: 'https://www.rei.com/product/144128/patagonia-houdini-jacket-womens',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 18: Full Sweatpants (400549) =====
+  {
+    id: '400549',
+    slug: 'full-sweatpants',
+    name: 'Full Sweatpants',
+    brand: 'Vuori',
+    retailPrice: 118,
+    colors: [
+      {
+        name: 'Light Gray',
+        hex: '#D3D3D3',
+        images: ['/products/400549 - light gray.webp'],
+      },
+      {
+        name: 'Black',
+        hex: '#1a1a1a',
+        images: ['/products/400549 - black.webp'],
+      },
+    ],
+    featuredImage: '/products/400549 - light gray.webp',
+    category: 'bottoms',
+    recoveryStage: 2,
+    shortDescription:
+      'Full length, thick sweatpants for when you really need warmth and cozy',
+    ourDescription:
+      'Full length, thick sweatpants in great fabric.',
+    inRecovery:
+      'For the days after a long, cold session and you really need to feel warm and cozy, these sweatpants leave no doubt that your body is in recovery and on its way to cozy warmth.',
+    wearIt: 'With a cropped top and if needing more, a cropped outer layer',
+    fabric: {
+      composition: '66% Organic Cotton, 34% Polyester',
+      feel: 'Ultra-soft fleece, substantial and warm',
+      type: 'blend',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Use Guppyfriend bag',
+      ],
+    },
+    fit: {
+      description: 'Tailored but not tight',
+      showsOff: 'Nothing - pure comfort',
+    },
+    pairItWith: [
+      {
+        productId: '400532',
+        productName: 'Fitted Tank',
+        reason: 'Loose bottoms with fitted top',
+      },
+      {
+        productId: '400545',
+        productName: 'Fitted Tee',
+        reason: 'Complete cozy recovery outfit',
+      },
+    ],
+    sustainabilityNotes:
+      '66% organic cotton. Contains some synthetic materials - use Guppyfriend bag.',
+    brandLink: 'https://www.nordstrom.com/s/restore-classis-sweatpants/8466165',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 19: Relax Cashmere Cardigan (400551) =====
+  {
+    id: '400551',
+    slug: 'relax-cashmere-cardigan',
+    name: 'Relax Cashmere Cardigan',
+    brand: 'Quince',
+    retailPrice: 118,
+    colors: [
+      {
+        name: 'Heather Cloud Beige',
+        hex: '#E8DDD0',
+        images: ['/products/400551 - beige.webp'],
+      },
+    ],
+    featuredImage: '/products/400551 - beige.webp',
+    category: 'outerwear',
+    recoveryStage: 3,
+    shortDescription:
+      'Oh-so-amazing cashmere with quarter-zip - nothing says recovery like cashmere',
+    ourDescription:
+      'This cardigan is oh-so amazing in cashmere with a classy look and front zip. Pairs with anything from your jeans to leggings or even shorts.',
+    inRecovery:
+      'Nothing says recovery like cashmere. For when the post-workout chill sets in a bit, you can reach for this number to keep you cozy.',
+    wearIt: 'With your leggings or shorts for added warmth; cozy over a tank',
+    fabric: {
+      composition: '100% Grade-A Mongolian Cashmere',
+      feel: 'Luxuriously soft cashmere - ultimate comfort',
+      type: 'natural',
+      microplasticLevel: 'none',
+      careInstructions: [
+        'Hand wash or dry clean',
+        'Lay flat to dry',
+        'Do not wring',
+        'Store folded, not hanging',
+      ],
+    },
+    fit: {
+      description: 'Loose, relaxed fit',
+      showsOff: 'Nothing - pure luxury',
+    },
+    pairItWith: [
+      {
+        productId: '400556',
+        productName: 'Light Compression Leggings',
+        reason: 'Luxurious warmth over athletic leggings',
+      },
+      {
+        productId: '400533',
+        productName: 'Every Day Short',
+        reason: 'Cashmere meets athletic shorts - ultimate recovery',
+      },
+    ],
+    sustainabilityNotes:
+      'Natural cashmere fiber, no microplastics. Ethically sourced Grade-A Mongolian cashmere. Long-lasting luxury garment.',
+    brandLink: 'https://www.quince.com/women/mongolian-cashmere-fisherman-quarter-zip-sweater',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 20: Buttoned Up Cardigan (400559) =====
+  {
+    id: '400559',
+    slug: 'buttoned-up-cardigan',
+    name: 'Buttoned Up Cardigan',
+    brand: 'Quince',
+    retailPrice: 130,
+    colors: [
+      {
+        name: 'Faded Denim',
+        hex: '#7892A8',
+        images: ['/products/400559 - denim.webp'],
+      },
+    ],
+    featuredImage: '/products/400559 - denim.webp',
+    category: 'outerwear',
+    recoveryStage: 3,
+    shortDescription:
+      'Button up cashmere sweater - perfect over athletic wear',
+    ourDescription:
+      'This button up sweater is perfect for throwing over your athletic fit clothes such as our leggings and tank, but reminds you that you are done with the endurance work for the day! So soft and classy, you will wear it all the time.',
+    inRecovery:
+      'No one works out in cashmere, so enough said.',
+    wearIt: 'With your favorite matched set leggings and tank or bra top',
+    fabric: {
+      composition: '100% Cashmere',
+      feel: 'Brushed cashmere - ultra soft and warm',
+      type: 'natural',
+      microplasticLevel: 'none',
+      careInstructions: [
+        'Hand wash or dry clean',
+        'Lay flat to dry',
+        'Do not wring',
+        'Store folded, not hanging',
+      ],
+    },
+    fit: {
+      description: 'Cropped, button-up style',
+      showsOff: 'Nothing - elegant comfort',
+    },
+    pairItWith: [
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings - ExtremeSoft',
+        reason: 'Powder blue leggings match faded denim cardigan',
+      },
+      {
+        productId: '400532',
+        productName: 'Fitted Tank',
+        reason: 'White tank under denim cardigan - classic look',
+      },
+    ],
+    sustainabilityNotes:
+      'Natural cashmere fiber, no microplastics. Long-lasting luxury garment designed for years of wear.',
+    brandLink: 'https://www.quince.com/women/brushed-cashmere-cropped-crewneck-cardigan',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 21: Cozy Knit Zip-Up Cardigan (400552) =====
+  {
+    id: '400552',
+    slug: 'cozy-knit-zip-up-cardigan',
+    name: 'Cozy Knit Zip-Up Cardigan',
+    brand: 'Zella',
+    retailPrice: 88,
+    colors: [
+      {
+        name: 'Gray Mist',
+        hex: '#B8B8B8',
+        images: ['/products/400552 - gray.webp'],
+      },
+    ],
+    featuredImage: '/products/400552 - gray.webp',
+    category: 'outerwear',
+    recoveryStage: 1,
+    shortDescription:
+      'Cozy and cute post-workout cardigan - washable and versatile',
+    ourDescription:
+      'Cozy and cute, but with fabric just right to hit the wash as often as you need it.',
+    inRecovery:
+      'As soon as your workout is over, especially after a good functional strength session, you need something warm and light to throw on. This cardigan is meant for post-workout wear, and is cute enough you might also get a second one for after the shower recovery too.',
+    wearIt: 'Over your gym clothes when you are done, or over your leggings and tank combo',
+    fabric: {
+      composition: 'Polyester blend (washable)',
+      feel: 'Cozy knit - soft and warm',
+      type: 'synthetic',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Use Guppyfriend bag',
+      ],
+    },
+    fit: {
+      description: 'Relaxed fit, full zip',
+      showsOff: 'Nothing - comfort first',
+    },
+    pairItWith: [
+      {
+        productId: '400532',
+        productName: 'Fitted Tank',
+        reason: 'Perfect post-workout layering',
+      },
+      {
+        productId: '400550',
+        productName: 'High Crop Halter Tank',
+        reason: 'Add warmth without bulk',
+      },
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings',
+        reason: 'Complete recovery outfit',
+      },
+      {
+        productId: '400556',
+        productName: 'Light Compression Leggings',
+        reason: 'Versatile pairing for any leggings',
+      },
+      {
+        productId: '400533',
+        productName: 'Every Day Short',
+        reason: 'Warm cardigan with shorts',
+      },
+    ],
+    sustainabilityNotes:
+      'Machine washable for frequent use. Contains synthetic materials - use Guppyfriend bag.',
+    brandLink: 'https://www.nordstrom.com/s/zella-cozy-knit-zip-up-cardigan/7921515',
+    inStock: true,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 22: Cropped Zipper Cardigan (400538) =====
+  {
+    id: '400538',
+    slug: 'cropped-zipper-cardigan',
+    name: 'Cropped Zipper Cardigan',
+    brand: 'Alo',
+    retailPrice: 188,
+    colors: [
+      {
+        name: 'Athletic Heather Grey',
+        hex: '#A8A8A8',
+        images: ['/products/400538 - gray.webp'],
+      },
+    ],
+    featuredImage: '/products/400538 - gray.webp',
+    category: 'outerwear',
+    recoveryStage: 3,
+    shortDescription:
+      'Roomy shoulders, corset waist, cropped - structured athletic style',
+    ourDescription:
+      'Roomy in shoulders with corset waist and cropped length - perfect for showing off your athletic build while staying cozy.',
+    inRecovery:
+      'This cardigan combines athletic structure with recovery comfort. The roomy shoulders accommodate your strong upper body while the corset waist creates definition.',
+    wearIt: 'With baggy pants or high-waisted leggings; fitted crop tank underneath',
+    fabric: {
+      composition: '90% Cotton, 9% Nylon, 1% Elastane',
+      feel: 'Structured knit with slight stretch',
+      type: 'blend',
+      microplasticLevel: 'low',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Cool iron if needed',
+      ],
+    },
+    fit: {
+      description: 'Roomy in shoulders, corset waist, cropped',
+      showsOff: 'Core, shoulders',
+    },
+    pairItWith: [
+      {
+        productId: '400544',
+        productName: 'Halter Crop Tank',
+        reason: 'Show off shoulders under structured cardigan',
+      },
+      {
+        productId: '400550',
+        productName: 'High Crop Halter Tank',
+        reason: 'Athletic tank meets athletic cardigan',
+      },
+      {
+        productId: '400536',
+        productName: 'Not for Jogging',
+        reason: 'Structured top with relaxed bottoms',
+      },
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings',
+        reason: 'High-waisted leggings with cropped cardigan',
+      },
+      {
+        productId: '400556',
+        productName: 'Light Compression Leggings',
+        reason: 'Perfect with high-waisted leggings',
+      },
+      {
+        productId: '400533',
+        productName: 'Every Day Short',
+        reason: 'Cardigan with athletic shorts',
+      },
+    ],
+    sustainabilityNotes:
+      '90% cotton with minimal synthetic content. Long-lasting structured garment.',
+    brandLink: 'https://www.aloyoga.com/products/w4601r-scholar-knit-cropped-full-zip-jacket-athletic-heather-grey',
+    inStock: true,
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 23: Relaxation Long Sleeve Tee (400553) =====
+  {
+    id: '400553',
+    slug: 'relaxation-long-sleeve-tee',
+    name: 'Relaxation Long Sleeve Tee',
+    brand: 'Vuori',
+    retailPrice: 68,
+    colors: [
+      {
+        name: 'Spearmint Heather',
+        hex: '#A8DADC',
+        images: ['/products/400553 - spearmint.webp'],
+      },
+      {
+        name: 'Purple',
+        hex: '#9187AA',
+        images: ['/products/400553 - purple.webp'],
+      },
+      {
+        name: 'White',
+        hex: '#FFFFFF',
+        images: ['/products/400553 - white.webp'],
+      },
+    ],
+    featuredImage: '/products/400553 - spearmint.webp',
+    category: 'tops',
+    recoveryStage: 3,
+    shortDescription:
+      'Loose but fitted long sleeve with sateen shine - fancy yet comfortable',
+    ourDescription:
+      'Loose but fitted and not too long, this super soft long sleeved tee is perfect with jeans, leggings, skirts and shorts. Pretty much any outfit! Works as a nice overlayer for a slight chill in the air. It has a slight sateen shine which makes it fancier than a typical tee, so you will want to wear it again and again.',
+    inRecovery:
+      'Just a bit too nice to wear to your workouts and gives the loose vibes you want after a long workout, but does not have the boxy, unfitted fit of a cotton tee shirt from the swag bag. You will know its chill time wearing this - whether at home or during the rest of your non-training life. A go to favorite.',
+    wearIt: 'With jeans, leggings, and shorts',
+    fabric: {
+      composition: 'Polyester blend with sateen finish',
+      feel: 'Super soft with subtle sheen',
+      type: 'synthetic',
+      microplasticLevel: 'medium',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Cool iron if needed',
+        'Use Guppyfriend bag',
+      ],
+    },
+    fit: {
+      description: 'Loose but not boxy; not cropped but not long',
+      showsOff: 'Nothing - elegant casual',
+    },
+    pairItWith: [
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings',
+        reason: 'Elegant top with athletic bottoms',
+      },
+      {
+        productId: '400533',
+        productName: 'Every Day Short',
+        reason: 'Long sleeve with shorts - versatile look',
+      },
+      {
+        productId: '400532',
+        productName: 'Fitted Tank',
+        reason: 'Layer long sleeve over tank',
+      },
+      {
+        productId: '400544',
+        productName: 'Halter Crop Tank',
+        reason: 'Stylish layering option',
+      },
+      {
+        productId: '400550',
+        productName: 'High Crop Halter Tank',
+        reason: 'Layer over athletic tank',
+      },
+    ],
+    sustainabilityNotes:
+      'Durable construction for long wear. Contains synthetic materials - use Guppyfriend bag.',
+    brandLink: 'https://www.nordstrom.com/s/daydream-crew-t-shirt/5315950',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 24: Cropped Sweatshirt (400554) =====
+  {
+    id: '400554',
+    slug: 'cropped-sweatshirt',
+    name: 'Cropped Sweatshirt',
+    brand: 'Zella',
+    retailPrice: 69,
+    colors: [
+      {
+        name: 'Dusty Rose',
+        hex: '#D4A5A5',
+        images: ['/products/400554 - dusty rose.webp'],
+      },
+    ],
+    featuredImage: '/products/400554 - dusty rose.webp',
+    category: 'tops',
+    recoveryStage: 2,
+    shortDescription:
+      'Perfect fit cropped sweatshirt - cozy without the bulk',
+    ourDescription:
+      'The perfect fit, cropped sweatshirt removes the bulk but still provides the warmth you need. Ultracozy and ultra versatile it is perfect for all the life in between the workouts.',
+    inRecovery:
+      'Perfect for removing the chill post workout, and so thick and luxurious you for sure are not working out in it. The cropped look also gives your body some freedom to move without being overwhelmed by the bulk of fabric. Especially a favorite of petite athletes.',
+    wearIt: 'With jeans, leggings, shorts or joggers over a cropped tank',
+    fabric: {
+      composition: '96% Cotton, 4% Spandex',
+      feel: 'Ultra-soft fleece with slight stretch',
+      type: 'blend',
+      microplasticLevel: 'low',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+      ],
+    },
+    fit: {
+      description: 'Loose, cropped',
+      showsOff: 'Nothing - comfort focused',
+    },
+    pairItWith: [
+      {
+        productId: '400536',
+        productName: 'Not for Jogging',
+        reason: 'Cropped sweatshirt with joggers',
+      },
+      {
+        productId: '400537',
+        productName: 'Light Compression Leggings',
+        reason: 'Cozy top with leggings',
+      },
+      {
+        productId: '400533',
+        productName: 'Every Day Short',
+        reason: 'Cropped sweatshirt shows off shorts',
+      },
+    ],
+    sustainabilityNotes:
+      '96% cotton with minimal synthetic content. Long-lasting comfort garment.',
+    brandLink: 'https://www.nordstrom.com/s/swoop-full-zip-hoodie/8116029',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
+
+  // ===== PRODUCT 25: Cross Drape Bra Tank (400555) =====
+  {
+    id: '400555',
+    slug: 'cross-drape-bra-tank',
+    name: 'Cross Drape Bra Tank',
+    brand: 'Berlook',
+    retailPrice: 38,
+    colors: [
+      {
+        name: 'Navy',
+        hex: '#1F3A5F',
+        images: ['/products/400555 - navy.webp'],
+      },
+      {
+        name: 'Blue',
+        hex: '#4A90E2',
+        images: ['/products/400555 - blue.webp'],
+      },
+      {
+        name: 'Black',
+        hex: '#1a1a1a',
+        images: ['/products/400555 - black.webp'],
+      },
+    ],
+    featuredImage: '/products/400555 - navy.webp',
+    category: 'tops',
+    recoveryStage: 3,
+    shortDescription:
+      'Stylish super cropped bra tank with draping crossover and mesh detail',
+    ourDescription:
+      'This stylish (and let\'s be honest, amazing looking) tank is super cropped and yet super classy thanks to the draping crossover pattern and mesh detail. Supportive yet playful, this bra tank is great solo or under an open cardigan.',
+    inRecovery:
+      'This is for the athlete who always wants to be on the go, but is forced to take recovery time by the forces of nature and being human. This bra tank keeps you deeply connected to that workout vibe with its support, structure and high crop, yet is too dreamy to be sweating in.',
+    wearIt: 'With not for jogging, sweatpants or high waisted leggings',
+    fabric: {
+      composition: 'Fabric: 75% Nylon, 25% Spandex; Fabric 2: 95% Nylon, 5% Spandex; Lining: 88% Nylon, 12% Spandex',
+      feel: 'Supportive stretch with mesh detail',
+      type: 'synthetic',
+      microplasticLevel: 'high',
+      careInstructions: [
+        'Machine wash cold',
+        'Hang dry',
+        'Do not bleach',
+        'Do not iron',
+        'ALWAYS use Guppyfriend bag',
+      ],
+    },
+    fit: {
+      description: 'Tight, supported bra, cropped',
+      showsOff: 'Core, shoulders, arms',
+    },
+    pairItWith: [
+      {
+        productId: '400543',
+        productName: 'Cropped Puffer',
+        reason: 'Bra tank under open puffer',
+      },
+      {
+        productId: '400535',
+        productName: 'Cropped Corset Fleece',
+        reason: 'Athletic tank under fleece',
+      },
+      {
+        productId: '400536',
+        productName: 'Not for Jogging',
+        reason: 'Cropped tank with relaxed joggers',
+      },
+      {
+        productId: '400549',
+        productName: 'Full Sweatpants',
+        reason: 'Athletic top with cozy bottoms',
+      },
+      {
+        productId: '400556',
+        productName: 'Light Compression Leggings',
+        reason: 'High-waisted leggings with cropped bra tank',
+      },
+      {
+        productId: '400538',
+        productName: 'Cropped Zipper Cardigan',
+        reason: 'Wear under open cardigan',
+      },
+    ],
+    sustainabilityNotes:
+      'High nylon content sheds microplastics. ALWAYS use Guppyfriend washing bag.',
+    brandLink: 'https://www.berlook.com/products/black-mesh-cross-front-tank-top-light-support',
+    inStock: true,
+    sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  },
 ];
 
 // ===== MATCHED SETS =====
