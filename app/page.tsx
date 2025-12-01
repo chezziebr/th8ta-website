@@ -23,36 +23,100 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-sage)]/60 to-[var(--color-teal)]/60"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-              You earned this layer.
+              For bodies that train. For hours that don't.
             </h1>
             <p className="text-lg md:text-xl text-white/95 mb-8 max-w-2xl mx-auto drop-shadow-md">
-              Not activewear. Afterwear. Curated recovery gear for endurance athletes who know
-              that what you wear after matters just as much.
+              Curated afterwear for endurance athletes. Everything you wear when you're not working out—designed for the body you've built.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/system">
-                <Button size="lg">Shop the 4-Stage System</Button>
+              <Link href="/shop/women">
+                <Button size="lg">Shop the Collection</Button>
               </Link>
-              <Link href="/science">
+              <Link href="/about">
                 <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-[var(--color-sage)]">
-                  Learn the Science
+                  Why Fit Matters →
                 </Button>
               </Link>
             </div>
           </div>
         </section>
 
-        {/* The Problem Section */}
+        {/* The Fit Problem Section */}
         <section className="py-16 md:py-24 bg-[var(--color-cream)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-charcoal)] mb-8">
+              The Fit Problem Nobody Talks About
+            </h2>
+            <p className="text-lg md:text-xl text-[var(--color-charcoal)] leading-relaxed mb-6">
+              You've spent years building this body. The shoulders, the lats, the legs that carried you across finish lines.
+            </p>
+            <p className="text-2xl md:text-3xl font-bold text-[var(--color-charcoal)] mb-6">
+              And nothing fits.
+            </p>
             <p className="text-lg md:text-xl text-[var(--color-charcoal)] leading-relaxed">
-              There were so many cute clothes out there, but we hit saturation. Another puffer—when
-              do I wear it? Is it for working out? The gym-to-office crossover wasn't for us.{' '}
+              Fashion brands design for average bodies. Athletic brands design for the workout. Nobody designs for the other 22 hours—when you're living in a body that trains, but you're not training.{' '}
               <strong className="text-[var(--color-sage)]">
-                Every piece of TH8TA gear has a purpose. A stage. A moment in your recovery when
-                it's the exact right thing.
+                That's what we're for.
               </strong>
             </p>
+          </div>
+        </section>
+
+        {/* Value Prop Section */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-6">
+                We do the work so you don't have to.
+              </h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                Think Whole Foods for athletic afterwear. Instead of scouring brands, reading reviews, wondering if this cardigan will pull across your shoulders—just shop here. If it's on TH8TA, it passed the test.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-sage)]/10 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-[var(--color-sage)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-3">
+                  Fits Athletic Bodies
+                </h3>
+                <p className="text-gray-600">
+                  Room in the shoulders. Space in the lats. Length in the torso. Every piece is tested on athletes.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-teal)]/10 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-[var(--color-teal)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-3">
+                  Feels Like Rest
+                </h3>
+                <p className="text-gray-600">
+                  Buttery soft, not performance-tight. Your brain knows the difference. These signal: you're off duty.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-terracotta)]/10 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-[var(--color-terracotta)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-3">
+                  Celebrates the Form
+                </h3>
+                <p className="text-gray-600">
+                  No hiding under oversized everything. Your athletic body, accentuated—not compressed or disguised.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -61,11 +125,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-4">
-                The 4-Stage Recovery System
+                Shop by Recovery Stage
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Every product fits into one of four recovery stages, designed to support your body
-                from the finish line to deep rest.
+                From the moment you finish to the minute you fall asleep—organized so you can find exactly what you need.
               </p>
             </div>
 
@@ -167,8 +230,8 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=1000&fit=crop&q=80"
-                  alt="Endurance athlete in recovery mode"
+                  src="/images/relax-beach.jpg"
+                  alt="Endurance athletes relaxing at the beach after training"
                   fill
                   className="object-cover"
                 />
@@ -192,9 +255,12 @@ export default function Home() {
         {/* Featured Products */}
         <section className="py-16 md:py-24 bg-[var(--color-cream)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-12 text-center">
-              Featured Products
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-4 text-center">
+              Tested on Athletes
             </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Every piece passes our fit test. These are selling fast.
+            </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredProducts.map((product) => (
@@ -229,14 +295,13 @@ export default function Home() {
         {/* The Science Teaser */}
         <section className="py-16 md:py-24 bg-[var(--color-teal)] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">The Science of Recovery</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Why Soft Fabric Actually Matters</h2>
             <p className="text-lg md:text-xl leading-relaxed mb-8">
-              Your brain needs permission to stop being an athlete. Here's how soft fabrics,
-              rituals, and purposeful gear activate parasympathetic recovery.
+              Your training tights are engineered for performance. Your brain associates that feel with work. Our fabrics are intentionally different—so your nervous system knows you're done for the day.
             </p>
             <Link href="/science">
               <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-[var(--color-teal)]">
-                Explore the Science
+                The Science of Afterwear →
               </Button>
             </Link>
           </div>

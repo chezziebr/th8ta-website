@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4 text-[var(--color-cream)]">TH8TA</h3>
             <p className="text-sm text-gray-300 mb-4">
-              Not activewear. Afterwear. Curated recovery gear for endurance athletes.
+              Curated afterwear for endurance athletes. For bodies that train. For hours that don't.
             </p>
           </div>
 
@@ -113,9 +113,14 @@ export const Footer: React.FC = () => {
 
         {/* Social & Copyright */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-300 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} TH8TA. All rights reserved.
-          </p>
+          <div className="mb-4 md:mb-0">
+            <p className="text-xs text-gray-400 mb-1 italic">
+              For bodies that train. For hours that don't.
+            </p>
+            <p className="text-sm text-gray-300">
+              &copy; {new Date().getFullYear()} TH8TA. All rights reserved.
+            </p>
+          </div>
 
           {/* Social Icons */}
           <div className="flex space-x-4">

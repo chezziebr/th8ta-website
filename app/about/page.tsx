@@ -17,75 +17,70 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1920&h=800&fit=crop&q=80"
-            alt="Endurance athlete at rest after workout"
+            src="/images/power-meter.jpg"
+            alt="Athletes sharing post-ride stats in recovery mode"
             fill
             className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-teal)]/70 to-[var(--color-sage)]/70"></div>
           <div className="relative z-10 text-center px-4 max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              What Comes After
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 drop-shadow-lg">
+              For the other 22 hours.
             </h1>
-            <p className="text-xl text-white/95 drop-shadow-md">
-              The finish line, the climb, the brutal tempo effort.
-            </p>
           </div>
         </section>
 
         {/* Opening Statement */}
         <section className="py-16 md:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xl md:text-2xl text-[var(--color-charcoal)] leading-relaxed text-center">
-              TH8TA is what comes after. After the finish line, the climb, the brutal tempo effort.
-              We're not here to make your new favorite race-day kit. We're here for everything
-              after that—when you're cooling down, peeling off soaked layers, and finally
-              remembering what warmth feels like.
+            <p className="text-xl md:text-2xl text-[var(--color-charcoal)] leading-relaxed text-center mb-8">
+              TH8TA is curated afterwear for endurance athletes.
+            </p>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed text-center">
+              We're not activewear—you have enough of that. We're not athleisure—we hate that word. We're everything you wear when you're not working out, designed for bodies that do.
             </p>
           </div>
         </section>
 
-        {/* Who We Are */}
+        {/* The Problem We Solve */}
         <section className="py-16 md:py-24 bg-[var(--color-cream)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-8 text-center">
-              Who We Are
+              Nothing Fits Right
             </h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                We curate recovery gear for endurance athletes who've already proven themselves.
-                Every item we offer is part of a bigger system: from the moment you get off the
-                trail to the minute your head hits the pillow.
+                You know the drill. Standard tees pull across your lats. "Relaxed fit" is still tight in the shoulders. Leggings feel like your training tights—your brain can't relax. You end up in oversized everything because nothing else works.
               </p>
-              <p>
-                We source from high-performance brands that align with our values—and we design
-                original pieces that fill the gaps the big guys forgot about. Think Title Nine's
-                curation meets The Feed's authority, with a healthy dose of real talk.
-              </p>
-              <p>
-                Because you've already done the hard part. Now it's time to recover like you mean
-                it.
+              <p className="text-xl font-medium text-[var(--color-sage)] text-center">
+                We fix that.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Why We Exist */}
+        {/* Our Philosophy */}
         <section className="py-16 md:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-charcoal)] mb-8 text-center">
-              Why We Exist
+              We Do the Work
             </h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p className="text-center text-xl md:text-2xl font-medium text-[var(--color-sage)]">
-                Because the recovery aisle doesn't exist.
+              <p>
+                Think of us like Whole Foods did for organic. Instead of scouring every brand, reading every label, wondering if this piece will fit your shoulders—you just shop TH8TA.
               </p>
-              <p className="text-center text-xl md:text-2xl font-medium text-[var(--color-sage)]">
-                Because most brands stop at the sweat.
+              <p>
+                Every piece passes the test:
               </p>
-              <p className="text-center text-xl md:text-2xl font-medium text-[var(--color-sage)]">
-                Because you've already done enough.
+              <ul className="list-disc list-inside space-y-2 ml-4 text-gray-700">
+                <li>Fits athletic proportions</li>
+                <li>Feels like rest, not work</li>
+                <li>Celebrates the athletic form</li>
+                <li>Worth the price</li>
+              </ul>
+              <p className="text-xl font-medium text-[var(--color-sage)] text-center">
+                If it's here, it works.
               </p>
             </div>
           </div>
@@ -157,10 +152,10 @@ export default function AboutPage() {
         <section className="py-16 md:py-24 bg-[var(--color-cream)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-charcoal)] mb-6">
-              Ready to Recover Like You Mean It?
+              You didn't spend years building this body to hide it in oversized everything.
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Explore the 4-Stage Recovery System and find your perfect post-workout gear.
+              Find afterwear that actually fits your athletic body.
             </p>
             <Link href="/shop/women">
               <Button size="lg">Shop Recovery Gear</Button>

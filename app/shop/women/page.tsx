@@ -63,9 +63,9 @@ export default function WomenShopPage() {
           />
           <div className="absolute inset-0 bg-[var(--color-sage)]/80"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Women's Recovery Gear</h1>
-            <p className="text-lg text-white/95 drop-shadow-md">
-              Curated pieces organized by the 4-Stage Recovery System
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Women's Afterwear</h1>
+            <p className="text-lg md:text-xl text-white/95 drop-shadow-md max-w-2xl">
+              Everything you wear when you're not working out—designed for the body you've built.
             </p>
           </div>
         </section>

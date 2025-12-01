@@ -18,8 +18,8 @@ export default function SciencePage() {
         {/* Hero Section */}
         <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=800&fit=crop&q=80"
-            alt="Athlete in deep rest and recovery"
+            src="/images/woodland-picnic.jpg"
+            alt="Athletes relaxing post-run in recovery mode"
             fill
             className="object-cover"
             priority
@@ -234,14 +234,13 @@ export default function SciencePage() {
         <section className="py-16 md:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-charcoal)] mb-6">
-              Ready to Activate Your Parasympathetic System?
+              Find Afterwear That Fits Your Athletic Body
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Explore the 4-Stage Recovery System designed to help your brain and body transition
-              from performance mode to rest mode.
+              Soft fabrics, room in the shoulders, designed to signal rest—not work.
             </p>
             <Link href="/shop/women">
-              <Button size="lg">Shop the System</Button>
+              <Button size="lg">Shop Afterwear</Button>
             </Link>
           </div>
         </section>
