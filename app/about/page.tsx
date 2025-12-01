@@ -20,7 +20,8 @@ export default function AboutPage() {
             src="/images/power-meter.jpg"
             alt="Athletes sharing post-ride stats in recovery mode"
             fill
-            className="object-cover"
+            className="object-cover object-center"
+            style={{ objectPosition: 'center 30%' }}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-teal)]/70 to-[var(--color-sage)]/70"></div>

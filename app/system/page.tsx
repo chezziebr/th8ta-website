@@ -26,7 +26,7 @@ export default function SystemPage() {
         {/* HERO SECTION */}
         <section className="relative py-20 md:py-32 overflow-hidden">
           <Image
-            src="/images/woodland-picnic.jpg"
+            src="/images/beach-chillax-horizontal.jpg"
             alt="Athletes in recovery mode after workout"
             fill
             className="object-cover opacity-20"
@@ -138,8 +138,8 @@ export default function SystemPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="aspect-video relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/beach-chillax-horizontal.jpg"
-                  alt="Athlete changing into recovery gear after workout"
+                  src="/images/relax-beach.jpg"
+                  alt="Athletes post-workout in recovery mode"
                   fill
                   className="object-cover"
                 />
@@ -278,8 +278,8 @@ export default function SystemPage() {
               </div>
               <div className="aspect-video relative rounded-lg overflow-hidden order-1 md:order-2">
                 <Image
-                  src="/images/relax-beach.jpg"
-                  alt="Athletes relaxing post-workout in comfort"
+                  src="/images/woodland-picnic.jpg"
+                  alt="Athletes relaxing post-run with coffee"
                   fill
                   className="object-cover"
                 />
