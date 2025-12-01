@@ -56,7 +56,7 @@ export default function WomenShopPage() {
         {/* Header */}
         <section className="relative bg-[var(--color-sage)] text-white py-16 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1920&h=600&fit=crop&q=80"
+            src="/images/beach-chillax-vert.jpg"
             alt="Women's recovery wear collection"
             fill
             className="object-cover opacity-20"

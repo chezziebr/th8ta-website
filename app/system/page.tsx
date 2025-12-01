@@ -26,8 +26,8 @@ export default function SystemPage() {
         {/* HERO SECTION */}
         <section className="relative py-20 md:py-32 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1200&fit=crop&q=80"
-            alt="Recovery gear organized by stages"
+            src="/images/woodland-picnic.jpg"
+            alt="Athletes in recovery mode after workout"
             fill
             className="object-cover opacity-20"
           />
@@ -136,7 +136,14 @@ export default function SystemPage() {
         <section className="py-16 md:py-24 bg-[var(--color-teal)] bg-opacity-5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg"></div>
+              <div className="aspect-video relative rounded-lg overflow-hidden">
+                <Image
+                  src="/images/beach-chillax-horizontal.jpg"
+                  alt="Athlete changing into recovery gear after workout"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full bg-[var(--color-teal)] text-white flex items-center justify-center text-2xl font-bold">
@@ -269,7 +276,14 @@ export default function SystemPage() {
                   </Link>
                 </div>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg order-1 md:order-2"></div>
+              <div className="aspect-video relative rounded-lg overflow-hidden order-1 md:order-2">
+                <Image
+                  src="/images/relax-beach.jpg"
+                  alt="Athletes relaxing post-workout in comfort"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -278,7 +292,14 @@ export default function SystemPage() {
         <section className="py-16 md:py-24 bg-[var(--color-cream)]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg"></div>
+              <div className="aspect-video relative rounded-lg overflow-hidden">
+                <Image
+                  src="/images/power-meter.jpg"
+                  alt="Athletes looking put-together while recovering"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full bg-[var(--color-terracotta)] text-white flex items-center justify-center text-2xl font-bold">
@@ -399,7 +420,14 @@ export default function SystemPage() {
                   </Link>
                 </div>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg order-1 md:order-2"></div>
+              <div className="aspect-video relative rounded-lg overflow-hidden order-1 md:order-2">
+                <Image
+                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=600&fit=crop&q=80"
+                  alt="Cozy sleep environment for deep recovery"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
