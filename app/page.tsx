@@ -14,8 +14,8 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1920&h=1080&fit=crop&q=80"
-            alt="Athlete recovering after workout"
+            src="/images/hero-beach.jpg"
+            alt="Athlete in recovery wear on the beach at sunset"
             fill
             className="object-cover"
             priority
