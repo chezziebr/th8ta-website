@@ -798,13 +798,13 @@ export const products: Product[] = [
         name: 'Sky Blue',
         hex: '#87CEEB',
         images: [
-          '/images/products/400557-1.png',
-          '/images/products/400557-2.png',
-          '/images/products/400557-3.png',
+          '/products/400557 1.png',
+          '/products/400557 2.png',
+          '/products/400557 3.png',
         ],
       },
     ],
-    featuredImage: '/images/products/400557-1.png',
+    featuredImage: '/products/400557 1.png',
     category: 'bottoms',
     recoveryStage: 3,
     shortDescription:
@@ -871,10 +871,10 @@ export const products: Product[] = [
       {
         name: 'Purple',
         hex: '#8B5A8C',
-        images: ['/products/400548 - purple.webp'],
+        images: ['/products/placeholder.svg'],
       },
     ],
-    featuredImage: '/products/400548 - purple.webp',
+    featuredImage: '/products/placeholder.svg',
     category: 'accessories',
     recoveryStage: 1,
     shortDescription:
@@ -935,10 +935,10 @@ export const products: Product[] = [
       {
         name: 'Gray',
         hex: '#808080',
-        images: ['/products/400542 - gray.webp'],
+        images: ['/products/placeholder.svg'],
       },
     ],
-    featuredImage: '/products/400542 - gray.webp',
+    featuredImage: '/products/placeholder.svg',
     category: 'tops',
     recoveryStage: 2,
     shortDescription:
@@ -994,10 +994,10 @@ export const products: Product[] = [
       {
         name: 'Black',
         hex: '#1a1a1a',
-        images: ['/products/400558 - black.webp'],
+        images: ['/products/placeholder.svg'],
       },
     ],
-    featuredImage: '/products/400558 - black.webp',
+    featuredImage: '/products/placeholder.svg',
     category: 'accessories',
     recoveryStage: 1,
     shortDescription:
@@ -1041,10 +1041,10 @@ export const products: Product[] = [
       {
         name: 'Powder Blue',
         hex: '#B0D4E3',
-        images: ['/products/400546 - powder blue.webp'],
+        images: ['/products/400546 - powder blue.png'],
       },
     ],
-    featuredImage: '/products/400546 - powder blue.webp',
+    featuredImage: '/products/400546 - powder blue.png',
     category: 'outerwear',
     recoveryStage: 1,
     shortDescription:
@@ -1095,10 +1095,14 @@ export const products: Product[] = [
       {
         name: 'Salmon',
         hex: '#FA8072',
-        images: ['/products/400547 - salmon.webp'],
+        images: [
+          '/products/400547 - salmon 1.jpeg',
+          '/products/400547 - salmon 2.jpeg',
+          '/products/400547 - Salmon 3.jpeg',
+        ],
       },
     ],
-    featuredImage: '/products/400547 - salmon.webp',
+    featuredImage: '/products/400547 - salmon 1.jpeg',
     category: 'outerwear',
     recoveryStage: 1,
     shortDescription:
@@ -1143,15 +1147,18 @@ export const products: Product[] = [
       {
         name: 'Light Gray',
         hex: '#D3D3D3',
-        images: ['/products/400549 - light gray.webp'],
+        images: [
+          '/products/400549 - gray 1.png',
+          '/products/400549 - gray 2.png',
+        ],
       },
       {
         name: 'Black',
         hex: '#1a1a1a',
-        images: ['/products/400549 - black.webp'],
+        images: ['/products/400549 - black.png'],
       },
     ],
-    featuredImage: '/products/400549 - light gray.webp',
+    featuredImage: '/products/400549 - gray 1.png',
     category: 'bottoms',
     recoveryStage: 2,
     shortDescription:
@@ -1207,10 +1214,10 @@ export const products: Product[] = [
       {
         name: 'Heather Cloud Beige',
         hex: '#E8DDD0',
-        images: ['/products/400551 - beige.webp'],
+        images: ['/products/placeholder.svg'],
       },
     ],
-    featuredImage: '/products/400551 - beige.webp',
+    featuredImage: '/products/placeholder.svg',
     category: 'outerwear',
     recoveryStage: 3,
     shortDescription:
@@ -1266,10 +1273,10 @@ export const products: Product[] = [
       {
         name: 'Faded Denim',
         hex: '#7892A8',
-        images: ['/products/400559 - denim.webp'],
+        images: ['/products/placeholder.svg'],
       },
     ],
-    featuredImage: '/products/400559 - denim.webp',
+    featuredImage: '/products/placeholder.svg',
     category: 'outerwear',
     recoveryStage: 3,
     shortDescription:
@@ -1325,10 +1332,14 @@ export const products: Product[] = [
       {
         name: 'Gray Mist',
         hex: '#B8B8B8',
-        images: ['/products/400552 - gray.webp'],
+        images: [
+          '/products/400552 - gray mist.png',
+          '/products/400552 - gray mist 2.png',
+          '/products/400552 - gray mist 3.png',
+        ],
       },
     ],
-    featuredImage: '/products/400552 - gray.webp',
+    featuredImage: '/products/400552 - gray mist.png',
     category: 'outerwear',
     recoveryStage: 1,
     shortDescription:
@@ -1478,20 +1489,23 @@ export const products: Product[] = [
       {
         name: 'Spearmint Heather',
         hex: '#A8DADC',
-        images: ['/products/400553 - spearmint.webp'],
+        images: ['/products/placeholder.svg'],
       },
       {
         name: 'Purple',
         hex: '#9187AA',
-        images: ['/products/400553 - purple.webp'],
+        images: ['/products/placeholder.svg'],
       },
       {
         name: 'White',
         hex: '#FFFFFF',
-        images: ['/products/400553 - white.webp'],
+        images: [
+          '/products/400553 - white.png',
+          '/products/400553 - white 2.png',
+        ],
       },
     ],
-    featuredImage: '/products/400553 - spearmint.webp',
+    featuredImage: '/products/400553 - white.png',
     category: 'tops',
     recoveryStage: 3,
     shortDescription:
@@ -1563,10 +1577,13 @@ export const products: Product[] = [
       {
         name: 'Dusty Rose',
         hex: '#D4A5A5',
-        images: ['/products/400554 - dusty rose.webp'],
+        images: [
+          '/products/400554 - dusty rose.png',
+          '/products/400554 - dusty rose 2.png',
+        ],
       },
     ],
-    featuredImage: '/products/400554 - dusty rose.webp',
+    featuredImage: '/products/400554 - dusty rose.png',
     category: 'tops',
     recoveryStage: 2,
     shortDescription:
@@ -1626,20 +1643,30 @@ export const products: Product[] = [
       {
         name: 'Navy',
         hex: '#1F3A5F',
-        images: ['/products/400555 - navy.webp'],
+        images: [
+          '/products/400555 - navy .webp',
+          '/products/400555 - navy 2.webp',
+        ],
       },
       {
         name: 'Blue',
         hex: '#4A90E2',
-        images: ['/products/400555 - blue.webp'],
+        images: [
+          '/products/400555 - blue.webp',
+          '/products/400555 - blue 2.webp',
+          '/products/400555 - blue 3.webp',
+        ],
       },
       {
         name: 'Black',
         hex: '#1a1a1a',
-        images: ['/products/400555 - black.webp'],
+        images: [
+          '/products/400555 - black.webp',
+          '/products/400555 - black 2.webp',
+        ],
       },
     ],
-    featuredImage: '/products/400555 - navy.webp',
+    featuredImage: '/products/400555 - navy .webp',
     category: 'tops',
     recoveryStage: 3,
     shortDescription:
