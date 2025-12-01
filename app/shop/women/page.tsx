@@ -16,6 +16,7 @@ export default function WomenShopPage() {
   const [selectedFabric, setSelectedFabric] = useState<FabricType | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState<string>('newest');
+  const [showFilters, setShowFilters] = useState(false);
 
   // Filter products
   const filteredProducts = useMemo(() => {
@@ -62,28 +63,87 @@ export default function WomenShopPage() {
             className="object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-[var(--color-sage)]/80"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Women's Afterwear</h1>
-            <p className="text-lg md:text-xl text-white/95 drop-shadow-md max-w-2xl">
+            <p className="text-lg md:text-xl text-white/95 drop-shadow-md max-w-2xl mx-auto">
               Everything you wear when you're not working out—designed for the body you've built.
             </p>
+          </div>
+        </section>
+
+        {/* Category Navigation */}
+        <section className="bg-white border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex justify-center gap-3 flex-wrap">
+              <button
+                onClick={() => setSelectedType(null)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedType === null
+                    ? 'bg-[var(--color-charcoal)] text-white'
+                    : 'bg-white text-[var(--color-charcoal)] border border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                View All
+              </button>
+              <button
+                onClick={() => setSelectedType('tops')}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedType === 'tops'
+                    ? 'bg-[var(--color-charcoal)] text-white'
+                    : 'bg-white text-[var(--color-charcoal)] border border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                Tops
+              </button>
+              <button
+                onClick={() => setSelectedType('bottoms')}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedType === 'bottoms'
+                    ? 'bg-[var(--color-charcoal)] text-white'
+                    : 'bg-white text-[var(--color-charcoal)] border border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                Bottoms
+              </button>
+              <button
+                onClick={() => setSelectedType('outerwear')}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedType === 'outerwear'
+                    ? 'bg-[var(--color-charcoal)] text-white'
+                    : 'bg-white text-[var(--color-charcoal)] border border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                Sweaters & Outerwear
+              </button>
+              <button
+                onClick={() => setSelectedType('accessories')}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedType === 'accessories'
+                    ? 'bg-[var(--color-charcoal)] text-white'
+                    : 'bg-white text-[var(--color-charcoal)] border border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                Accessories
+              </button>
+            </div>
           </div>
         </section>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Filters Sidebar */}
-            <aside className="lg:w-64 flex-shrink-0">
-              <div className="bg-white rounded-lg p-6 sticky top-24">
-                <div className="flex justify-between items-center mb-6">
-                  <h2 className="text-lg font-bold text-[var(--color-charcoal)]">Filters</h2>
-                  <button
-                    onClick={clearFilters}
-                    className="text-sm text-[var(--color-sage)] hover:underline"
-                  >
-                    Clear All
-                  </button>
-                </div>
+            {showFilters && (
+              <aside className="lg:w-64 flex-shrink-0">
+                <div className="bg-white rounded-lg p-6 sticky top-24">
+                  <div className="flex justify-between items-center mb-6">
+                    <h2 className="text-lg font-bold text-[var(--color-charcoal)]">Filters</h2>
+                    <button
+                      onClick={clearFilters}
+                      className="text-sm text-[var(--color-sage)] hover:underline"
+                    >
+                      Clear All
+                    </button>
+                  </div>
 
                 {/* Recovery Stage Filter */}
                 <div className="mb-6">
@@ -165,14 +225,23 @@ export default function WomenShopPage() {
                 </div>
               </div>
             </aside>
+            )}
 
             {/* Products Grid */}
             <div className="flex-1">
-              {/* Sort & Results Count */}
+              {/* Filters Toggle & Sort */}
               <div className="flex justify-between items-center mb-6">
-                <p className="text-gray-600">
-                  {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
-                </p>
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="px-4 py-2 border border-gray-300 rounded text-sm font-medium text-[var(--color-charcoal)] hover:border-gray-400 transition-colors"
+                  >
+                    {showFilters ? 'Hide Filters' : 'Filters'}
+                  </button>
+                  <p className="text-gray-600">
+                    Showing {filteredProducts.length} result{filteredProducts.length !== 1 ? 's' : ''}
+                  </p>
+                </div>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -185,7 +254,9 @@ export default function WomenShopPage() {
               </div>
 
               {/* Products */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${
+                showFilters ? 'lg:grid-cols-3' : 'lg:grid-cols-4'
+              }`}>
                 {filteredProducts.map((product) => (
                   <Link key={product.id} href={`/product/${product.slug}`} className="h-full">
                     <Card hover padding="none" className="overflow-hidden group cursor-pointer h-full flex flex-col">
