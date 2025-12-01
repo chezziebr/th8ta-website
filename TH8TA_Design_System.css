@@ -1,0 +1,859 @@
+/* ============================================
+   TH8TA DESIGN SYSTEM
+   Minimal Palette: Gray, White, Lilac
+   Version 1.0 | November 2025
+   ============================================ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ============================================ */
+
+:root {
+  /* ===================
+     COLOR PALETTE
+     =================== */
+  
+  /* Primary Colors */
+  --color-charcoal: #2A2A2A;           /* Headlines, nav, primary text */
+  --color-charcoal-soft: #3D3D3D;      /* Slightly lighter for large text blocks */
+  
+  /* Background Colors */
+  --color-white: #FFFFFF;              /* Pure white - cards, clean space */
+  --color-soft-white: #FAFAFA;         /* Main page background */
+  --color-warm-gray: #F2F0ED;          /* Section dividers, card backgrounds */
+  --color-warm-gray-dark: #E8E5E1;     /* Hover states on warm gray */
+  
+  /* Accent Color - Lilac */
+  --color-lilac: #B8A9C9;              /* Primary accent - CTAs, badges */
+  --color-lilac-hover: #A899BA;        /* Hover state for lilac */
+  --color-lilac-light: #D4C9E0;        /* Light lilac for subtle backgrounds */
+  --color-lilac-soft: #EDE9F2;         /* Very light lilac wash */
+  
+  /* Neutral Grays */
+  --color-border: #E5E5E5;             /* Borders, dividers */
+  --color-border-dark: #D5D5D5;        /* Darker borders for emphasis */
+  --color-text-secondary: #6B6B6B;     /* Captions, metadata, secondary text */
+  --color-text-tertiary: #999999;      /* Disabled states, placeholders */
+  
+  /* Stone/Taupe (for photography backgrounds) */
+  --color-stone: #C8C2BC;              /* Reference for image backgrounds */
+  --color-stone-light: #D9D5D0;        /* Lighter stone */
+  --color-stone-warm: #D4CEC6;         /* Warmer stone variant */
+  
+  /* Semantic Colors */
+  --color-success: #7DA47D;            /* Success states - muted green */
+  --color-error: #C97B7B;              /* Error states - muted red */
+  --color-warning: #D4B896;            /* Warning states - muted gold */
+  
+  /* ===================
+     TYPOGRAPHY
+     =================== */
+  
+  /* Font Families */
+  --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Font Sizes - Desktop */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+  --text-6xl: 3.75rem;     /* 60px */
+  --text-7xl: 4.5rem;      /* 72px */
+  
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 1.75;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ===================
+     SPACING
+     =================== */
+  
+  --space-0: 0;
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-8: 2rem;         /* 32px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+  --space-20: 5rem;        /* 80px */
+  --space-24: 6rem;        /* 96px */
+  --space-32: 8rem;        /* 128px */
+  --space-40: 10rem;       /* 160px */
+  
+  /* ===================
+     BORDERS & RADIUS
+     =================== */
+  
+  --radius-none: 0;
+  --radius-sm: 0.125rem;   /* 2px */
+  --radius-default: 0.25rem; /* 4px */
+  --radius-md: 0.375rem;   /* 6px */
+  --radius-lg: 0.5rem;     /* 8px */
+  --radius-xl: 0.75rem;    /* 12px */
+  --radius-2xl: 1rem;      /* 16px */
+  --radius-full: 9999px;   /* Pill shape */
+  
+  --border-width: 1px;
+  --border-width-2: 2px;
+  
+  /* ===================
+     SHADOWS
+     =================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* ===================
+     TRANSITIONS
+     =================== */
+  
+  --transition-fast: 150ms ease;
+  --transition-default: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-slower: 500ms ease;
+  
+  /* ===================
+     Z-INDEX SCALE
+     =================== */
+  
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  
+  /* ===================
+     LAYOUT
+     =================== */
+  
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 1440px;
+  --max-width-content: 1200px;
+  
+  --header-height: 72px;
+  --header-height-mobile: 64px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: var(--leading-normal);
+  color: var(--color-charcoal);
+  background-color: var(--color-soft-white);
+}
+
+/* ============================================
+   TYPOGRAPHY STYLES
+   ============================================ */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-tight);
+  color: var(--color-charcoal);
+}
+
+.heading-1, h1 {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.heading-2, h2 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.heading-3, h3 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-medium);
+}
+
+.heading-4, h4 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+}
+
+.heading-5, h5 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
+}
+
+.heading-6, h6 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+}
+
+/* Body Text */
+.text-body {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-charcoal-soft);
+}
+
+.text-body-lg {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.text-body-sm {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+/* Secondary/Caption Text */
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-caption {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.text-overline {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--color-charcoal);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-lilac);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-default);
+  cursor: pointer;
+  transition: all var(--transition-default);
+}
+
+/* Primary Button - Lilac */
+.btn-primary {
+  background-color: var(--color-lilac);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-lilac-hover);
+  color: var(--color-white);
+}
+
+/* Secondary Button - Outlined */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  border: var(--border-width) solid var(--color-charcoal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+}
+
+/* Ghost Button - Text Only */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  padding: var(--space-2) var(--space-4);
+}
+
+.btn-ghost:hover {
+  color: var(--color-lilac);
+  background-color: var(--color-lilac-soft);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+input,
+select,
+textarea {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-default);
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-lilac);
+}
+
+.input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* Select */
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6B6B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-default);
+}
+
+.card-bordered {
+  border: var(--border-width) solid var(--color-border);
+}
+
+/* Product Card */
+.product-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-card__image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--color-warm-gray);
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-card__image img {
+  transform: scale(1.03);
+}
+
+.product-card__content {
+  padding: var(--space-4);
+}
+
+.product-card__title {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-1);
+}
+
+.product-card__price {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   BADGE STYLES
+   ============================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-full);
+}
+
+/* Stage Badge - Primary (Lilac) */
+.badge-stage {
+  background-color: var(--color-lilac);
+  color: var(--color-white);
+}
+
+/* Stage Badge - Outline */
+.badge-stage-outline {
+  background-color: transparent;
+  color: var(--color-lilac);
+  border: var(--border-width) solid var(--color-lilac);
+}
+
+/* Neutral Badge */
+.badge-neutral {
+  background-color: var(--color-warm-gray);
+  color: var(--color-charcoal);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 var(--space-6);
+  background-color: var(--color-white);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.nav__logo {
+  font-family: var(--font-primary);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-charcoal);
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.nav__link {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-charcoal);
+  transition: color var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-lilac);
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+.section {
+  padding: var(--space-20) var(--space-6);
+}
+
+.section--white {
+  background-color: var(--color-white);
+}
+
+.section--gray {
+  background-color: var(--color-warm-gray);
+}
+
+.section--soft {
+  background-color: var(--color-soft-white);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section__title {
+  margin-bottom: var(--space-4);
+}
+
+.section__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--max-width-md);
+}
+
+.container--wide {
+  max-width: var(--max-width-2xl);
+}
+
+/* ============================================
+   GRID SYSTEM
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-soft-white);
+}
+
+.hero__content {
+  max-width: 600px;
+}
+
+.hero__title {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-none);
+  margin-bottom: var(--space-6);
+}
+
+.hero__subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--space-4);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  padding: var(--space-16) var(--space-6);
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer a:hover {
+  color: var(--color-white);
+}
+
+.footer__title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+  color: var(--color-white);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Display */
+.hidden { display: none; }
+.block { display: block; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+
+/* Flexbox */
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+
+/* Spacing Utilities */
+.m-auto { margin: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Width */
+.w-full { width: 100%; }
+.max-w-content { max-width: var(--max-width-content); }
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 1024px) {
+  :root {
+    --text-5xl: 2.5rem;
+    --text-6xl: 3rem;
+    --text-7xl: 3.5rem;
+  }
+  
+  .section {
+    padding: var(--space-16) var(--space-6);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-4xl: 1.875rem;
+    --text-5xl: 2.25rem;
+    --text-6xl: 2.5rem;
+  }
+  
+  .section {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+  
+  .nav {
+    height: var(--header-height-mobile);
+    padding: 0 var(--space-4);
+  }
+  
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   STAGE-SPECIFIC STYLES
+   ============================================ */
+
+/* Stage Cards on "The System" page */
+.stage-card {
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.stage-card--1 { background-color: var(--color-white); }
+.stage-card--2 { background-color: var(--color-warm-gray); }
+.stage-card--3 { background-color: var(--color-white); }
+.stage-card--4 { background-color: var(--color-warm-gray); }
+
+.stage-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-lilac);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+/* ============================================
+   LILAC ACCENT USAGE GUIDE
+   ============================================ */
+
+/*
+   USE LILAC FOR:
+   ✓ Primary CTA buttons (.btn-primary)
+   ✓ Stage badges (.badge-stage)
+   ✓ Active navigation states
+   ✓ Hover states on links
+   ✓ Focus states on form inputs
+   ✓ Stage number circles
+   ✓ "Add to Cart" buttons
+   ✓ Newsletter signup buttons
+   ✓ Selected filter states
+   
+   DO NOT USE LILAC FOR:
+   ✗ Large background sections
+   ✗ Body text
+   ✗ Headers
+   ✗ Multiple elements at once
+   ✗ Overusing on any single page
+   
+   RULE: Lilac should be a "whisper, not a shout"
+   Aim for 1-3 lilac elements visible at any time
+*/

@@ -274,7 +274,6 @@ export default function WomenShopPage() {
                         )}
                       </div>
                       <div className="p-4 flex-1 flex flex-col">
-                        <p className="text-xs text-gray-600 mb-1">{product.brand}</p>
                         <h3 className="font-semibold text-[var(--color-charcoal)] mb-1 group-hover:text-[var(--color-sage)] transition-colors line-clamp-2">
                           {product.name}
                         </h3>

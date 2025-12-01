@@ -869,12 +869,17 @@ export const products: Product[] = [
     retailPrice: 99,
     colors: [
       {
-        name: 'Purple',
-        hex: '#8B5A8C',
-        images: ['/products/placeholder.svg'],
+        name: 'Champagne',
+        hex: '#F7E7CE',
+        images: [
+          '/products/400548  - champagne.avif',
+          '/products/400548 - champagne 2.jpg',
+          '/products/400548 - champagne 3.jpg',
+          '/products/400548 - champagne 4.jpg',
+        ],
       },
     ],
-    featuredImage: '/products/placeholder.svg',
+    featuredImage: '/products/400548  - champagne.avif',
     category: 'accessories',
     recoveryStage: 1,
     shortDescription:
@@ -1214,10 +1219,14 @@ export const products: Product[] = [
       {
         name: 'Heather Cloud Beige',
         hex: '#E8DDD0',
-        images: ['/products/placeholder.svg'],
+        images: [
+          '/products/400551 - beige.png',
+          '/products/400551 - beige 2.png',
+          '/products/400551 - beige 3.png',
+        ],
       },
     ],
-    featuredImage: '/products/placeholder.svg',
+    featuredImage: '/products/400551 - beige.png',
     category: 'outerwear',
     recoveryStage: 3,
     shortDescription:
@@ -1273,10 +1282,14 @@ export const products: Product[] = [
       {
         name: 'Faded Denim',
         hex: '#7892A8',
-        images: ['/products/placeholder.svg'],
+        images: [
+          '/products/400559 blue.png',
+          '/products/400559 blue 2.png',
+          '/products/400559 blue 3.png',
+        ],
       },
     ],
-    featuredImage: '/products/placeholder.svg',
+    featuredImage: '/products/400559 blue.png',
     category: 'outerwear',
     recoveryStage: 3,
     shortDescription:
