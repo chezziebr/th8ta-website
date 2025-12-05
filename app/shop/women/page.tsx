@@ -2,9 +2,7 @@
 
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-import { Badge } from '@/components/ui/Badge';
-import { Card } from '@/components/ui/Card';
-import Link from 'next/link';
+import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
 import { useState, useMemo } from 'react';
 import { products } from '@/lib/products';
@@ -53,7 +51,7 @@ export default function WomenShopPage() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-white">
         {/* Header */}
         <section className="relative bg-[var(--color-sage)] text-white py-16 overflow-hidden">
           <Image
@@ -229,61 +227,84 @@ export default function WomenShopPage() {
 
             {/* Products Grid */}
             <div className="flex-1">
-              {/* Filters Toggle & Sort */}
-              <div className="flex justify-between items-center mb-6">
+              {/* Lululemon-style Collection Header */}
+              <div className="collection-header">
                 <div className="flex items-center gap-4">
                   <button
                     onClick={() => setShowFilters(!showFilters)}
-                    className="px-4 py-2 border border-gray-300 rounded text-sm font-medium text-[var(--color-charcoal)] hover:border-gray-400 transition-colors"
+                    className="sort-button"
                   >
                     {showFilters ? 'Hide Filters' : 'Filters'}
                   </button>
-                  <p className="text-gray-600">
-                    Showing {filteredProducts.length} result{filteredProducts.length !== 1 ? 's' : ''}
-                  </p>
+                  <button className="sort-button">
+                    Sort by ▼
+                  </button>
                 </div>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-sage)]"
-                >
-                  <option value="newest">Newest</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                </select>
+                <div className="product-count">
+                  {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
+                </div>
               </div>
 
-              {/* Products */}
-              <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${
-                showFilters ? 'lg:grid-cols-3' : 'lg:grid-cols-4'
-              }`}>
+              <style jsx>{`
+                .collection-header {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 20px 0;
+                  border-bottom: 1px solid #e5e5e5;
+                  margin-bottom: 20px;
+                }
+
+                .sort-button {
+                  font-size: 14px;
+                  color: #000000;
+                  background: transparent;
+                  border: none;
+                  cursor: pointer;
+                  font-family: 'Helvetica Neue', Arial, sans-serif;
+                  padding: 0;
+                }
+
+                .sort-button:hover {
+                  text-decoration: underline;
+                }
+
+                .product-count {
+                  font-size: 14px;
+                  color: #666666;
+                }
+              `}</style>
+
+              {/* Products - Lululemon Style Grid */}
+              <div className="products-grid">
                 {filteredProducts.map((product) => (
-                  <Link key={product.id} href={`/product/${product.slug}`} className="h-full">
-                    <Card hover padding="none" className="overflow-hidden group cursor-pointer h-full flex flex-col">
-                      <div className="aspect-[3/4] bg-gray-200 relative overflow-hidden flex-shrink-0">
-                        <Image
-                          src={product.featuredImage}
-                          alt={product.name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        {product.recoveryStage && (
-                          <div className="absolute top-3 left-3">
-                            <Badge stage={product.recoveryStage} size="sm" />
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-4 flex-1 flex flex-col">
-                        <h3 className="font-semibold text-[var(--color-charcoal)] mb-1 group-hover:text-[var(--color-sage)] transition-colors line-clamp-2">
-                          {product.name}
-                        </h3>
-                        <p className="text-gray-600 text-sm mb-2 line-clamp-2 flex-1">{product.shortDescription}</p>
-                        <p className="font-bold text-[var(--color-charcoal)] mt-auto">${product.retailPrice}</p>
-                      </div>
-                    </Card>
-                  </Link>
+                  <ProductCard key={product.id} product={product} />
                 ))}
               </div>
+
+              <style jsx>{`
+                .products-grid {
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  gap: 3px;
+                  background: #ffffff;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                @media (max-width: 1199px) {
+                  .products-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                  }
+                }
+
+                @media (max-width: 768px) {
+                  .products-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2px;
+                  }
+                }
+              `}</style>
 
               {filteredProducts.length === 0 && (
                 <div className="text-center py-12">

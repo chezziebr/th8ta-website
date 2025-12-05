@@ -1,76 +1,97 @@
 @import "tailwindcss";
 
+/* Ridge Merino Inspired Design System - Clean Black/White/Gray */
 :root {
-  /* MINIMAL Gray/White/Lilac Color Scheme */
-  --charcoal: #2a2a2a;         /* Dark Charcoal - Strong Text */
-  --lilac: #B8A9C9;            /* Primary Accent - Lilac */
-  --warm-gray: #F2F0ED;        /* Warm Gray - Backgrounds */
-  --soft-white: #FAFAFA;       /* Clean White Background */
+  /* PRIMARY COLORS - Black/White/Gray Only */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-light: #F5F5F5;
+  --color-gray-medium: #E5E5E5;
+  --color-gray-dark: #666666;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
 
-  /* Legacy color names mapped to minimal scheme */
-  --sage: #B8A9C9;             /* Mapped to Lilac */
-  --teal: #B8A9C9;             /* Mapped to Lilac */
-  --terracotta: #B8A9C9;       /* Mapped to Lilac */
-  --lavender: #B8A9C9;         /* Mapped to Lilac */
-  --cream: #F2F0ED;            /* Mapped to Warm Gray */
+  /* LEGACY COMPATIBILITY - Map old colors to new system */
+  --charcoal: #1A1A1A;
+  --sage: #666666;
+  --teal: #666666;
+  --terracotta: #666666;
+  --lavender: #666666;
+  --cream: #F5F5F5;
+  --warm-gray: #F5F5F5;
+  --soft-white: #FFFFFF;
+  --lilac: #666666;
 
   --background: #ffffff;
-  --foreground: #2a2a2a;
+  --foreground: #1A1A1A;
 }
 
 @theme inline {
-  /* MINIMAL Brand Color Utilities */
+  /* RIDGE MERINO DESIGN SYSTEM */
 
-  /* Lilac - Primary Accent */
-  --color-lilac: #B8A9C9;
-  --color-lilac-dark: #A899BA;
-  --color-lilac-light: #D4C9E0;
-
-  /* Charcoal - Dark Strong Text */
-  --color-charcoal: #2a2a2a;
-  --color-charcoal-light: #4a4a4a;
-  --color-charcoal-dark: #1a1a1a;
-
-  /* Warm Gray - Neutral Background */
-  --color-warm-gray: #F2F0ED;
-  --color-warm-gray-dark: #E8E5E1;
-  --color-warm-gray-light: #FAFAFA;
-
-  /* Soft White - Clean Background */
-  --color-soft-white: #FAFAFA;
+  /* Primary Colors */
+  --color-black: #000000;
   --color-white: #FFFFFF;
+  --color-gray-light: #F5F5F5;
+  --color-gray-medium: #E5E5E5;
+  --color-gray-dark: #666666;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
 
-  /* Legacy color mappings for backward compatibility */
-  --color-sage: #B8A9C9;
-  --color-sage-dark: #A899BA;
-  --color-sage-light: #D4C9E0;
+  /* Legacy mappings for backward compatibility */
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #333333;
+  --color-charcoal-dark: #000000;
 
-  --color-teal: #B8A9C9;
-  --color-teal-dark: #A899BA;
-  --color-teal-light: #D4C9E0;
+  --color-sage: #666666;
+  --color-sage-dark: #555555;
+  --color-sage-light: #888888;
 
-  --color-terracotta: #B8A9C9;
-  --color-terracotta-dark: #A899BA;
-  --color-terracotta-light: #D4C9E0;
+  --color-teal: #666666;
+  --color-teal-dark: #555555;
+  --color-teal-light: #888888;
 
-  --color-lavender: #B8A9C9;
-  --color-lavender-dark: #A899BA;
-  --color-lavender-light: #D4C9E0;
+  --color-terracotta: #666666;
+  --color-terracotta-dark: #555555;
+  --color-terracotta-light: #888888;
 
-  --color-cream: #F2F0ED;
-  --color-cream-dark: #E8E5E1;
+  --color-lavender: #666666;
+  --color-lavender-dark: #555555;
+  --color-lavender-light: #888888;
+
+  --color-cream: #F5F5F5;
+  --color-cream-dark: #E5E5E5;
   --color-cream-light: #FAFAFA;
+
+  --color-warm-gray: #F5F5F5;
+  --color-soft-white: #FFFFFF;
+  --color-lilac: #666666;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Typography */
-  --font-headline: 'Montserrat', 'Outfit', 'Work Sans', sans-serif;
-  --font-body: 'Inter', 'Open Sans', 'Lato', sans-serif;
+  /* Typography - Inter for clean, modern look */
+  --font-headline: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Spacing */
-  --spacing-section: 6rem;
-  --spacing-section-mobile: 3rem;
+  /* Font Sizes */
+  --font-h1: 48px;
+  --font-h2: 36px;
+  --font-h3: 24px;
+  --font-h4: 20px;
+  --font-body: 16px;
+  --font-small: 14px;
+
+  /* Spacing System - Generous like Ridge Merino */
+  --space-xs: 10px;
+  --space-s: 20px;
+  --space-m: 40px;
+  --space-l: 60px;
+  --space-xl: 80px;
+  --space-xxl: 100px;
+
+  --spacing-section: 80px;
+  --spacing-section-mobile: 40px;
 }
 
 body {
@@ -80,29 +101,42 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
+/* RIDGE MERINO TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
+  color: var(--color-text-primary);
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 20px;
   font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
 }
 
 /* Smooth scrolling */
@@ -110,74 +144,112 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Modern card and section styles */
-.card-modern {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-modern:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-}
-
-/* Clean button styles */
+/* RIDGE MERINO BUTTONS */
 .btn-primary {
-  background: var(--charcoal);
-  color: white;
-  padding: 0.875rem 2rem;
-  border-radius: 4px;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 15px 40px;
+  border-radius: 2px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background: var(--color-charcoal-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #333333;
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--charcoal);
-  padding: 0.875rem 2rem;
-  border-radius: 4px;
+  color: var(--color-black);
+  padding: 15px 40px;
+  border-radius: 2px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: all 0.2s ease;
-  border: 1px solid var(--color-charcoal);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-black);
   cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background: var(--charcoal);
-  color: white;
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
-/* Clean section spacing */
+/* RIDGE MERINO CARDS */
+.card-modern {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-medium);
+  border-radius: 4px;
+  padding: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-modern:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* RIDGE MERINO INPUTS */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  border: 1px solid var(--color-gray-medium);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+/* GENEROUS SPACING */
 .section-clean {
-  padding: 5rem 0;
+  padding: 80px 0;
 }
 
+.container-max {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .section-clean {
-    padding: 3rem 0;
+    padding: 40px 0;
+  }
+
+  .container-max {
+    padding: 0 20px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
   }
 }
